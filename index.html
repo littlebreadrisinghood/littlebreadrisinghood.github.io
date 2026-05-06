@@ -129,8 +129,8 @@ button {
 </header>
 
 <section>
-<div class="card slider" id="slider">
-🌸 Pre-orders open Thursday • Pickup Sunday
+<div class="card" style="text-align:center; background:#fff0f6;">
+  🌸 Pre-orders open Wednesdays • Sunday pickups
 </div>
 </section>
 
@@ -138,9 +138,12 @@ button {
 <h2>🍞 Weekly Menu</h2>
 <div class="card">
 <p>Classic Sourdough</p>
-<p class="soldout">Rosemary Garlic (Sold Out)</p>
-<p>Chocolate Chip Cookies</p>
-<p>Muffins</p>
+<p>Roasted Garlic & Chives Sourdough</p>
+<p>Brown Butter Chocolate Chip Cookies</p>
+<p>Oatmeal Craisin White Chocolate Cookies</p>
+<p>Lemon Poppyseed Streusel Muffins</p>
+<p>Cinnamon Streuses Muffins</p>
+<p>Cinnamon Rolls w/Vanilla Icing</p>
 </div>
 </section>
 
@@ -216,18 +219,7 @@ button {
 </section>
 
 <script>
-/* SLIDER */
-const messages = [
-"🌸 Pre-orders open Thursday • Pickup Sunday",
-"🍞 Small batch • Fresh baked",
-"✨ Made with love & slow fermentation"
-];
 
-let i = 0;
-setInterval(() => {
-  i = (i + 1) % messages.length;
-  document.getElementById("slider").innerText = messages[i];
-}, 3000);
 
 /* FADE IN */
 const about = document.getElementById("about");
