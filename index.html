@@ -10,39 +10,53 @@
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  background: #fdfaf7;
+  background: linear-gradient(to bottom, #fffaf7, #f6f0ff);
   color: #4b3f3a;
+  overflow-x: hidden;
 }
 
+/* ✨ FLOATING MAGIC */
+.bubble {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 220, 240, 0.4);
+  border-radius: 50%;
+  animation: float 20s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) scale(0.5); }
+  100% { transform: translateY(-10vh) scale(1); }
+}
+
+/* HEADER */
 header {
   text-align: center;
-  padding: 60px 20px 40px;
+  padding: 70px 20px 40px;
   background: linear-gradient(135deg, #ffe5d9, #e4d7ff, #d6ecff);
 }
 
 .logo {
   max-width: 120px;
-  margin-bottom: 15px;
 }
 
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3em;
-  margin: 0;
 }
 
 .tagline {
-  margin-top: 10px;
   font-size: 1.2em;
 }
 
 .subtext {
   max-width: 500px;
-  margin: 15px auto;
-  font-size: 0.95em;
+  margin: auto;
   opacity: 0.8;
 }
 
+/* SECTIONS */
 section {
   padding: 50px 20px;
   max-width: 900px;
@@ -50,48 +64,32 @@ section {
 }
 
 h2 {
+  text-align: center;
   font-family: 'Playfair Display', serif;
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.menu, .pricing {
-  display: grid;
-  gap: 15px;
-  text-align: center;
 }
 
 .card {
-  background: #ffffff;
+  background: white;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  margin-top: 20px;
 }
 
-.pricing p {
-  margin: 6px 0;
+/* WEEKLY DROP */
+.drop {
+  background: #fff0f6;
+  text-align: center;
+  font-style: italic;
 }
 
-.about {
-  line-height: 1.7;
-  background: #fffaf5;
-  border-radius: 15px;
-  padding: 25px;
-}
-
-.order {
-  background: #f7f1ff;
-  border-radius: 15px;
-  padding: 25px;
-}
-
+/* FORM */
 input, textarea {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
   border-radius: 8px;
   border: 1px solid #ddd;
-  font-family: inherit;
 }
 
 button {
@@ -105,86 +103,63 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background: #dcb3ff;
-}
-
 .social {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .social a {
   margin: 0 10px;
   text-decoration: none;
   color: #6b5c55;
-  font-weight: 500;
-}
-
-footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 0.85em;
-  opacity: 0.7;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <!-- REPLACE src WITH YOUR LOGO FILE -->
-  <img src="logo.png" class="logo" alt="Logo">
+<!-- ✨ FLOATING ELEMENTS -->
+<div class="bubble" style="left:10%; animation-delay:0s;"></div>
+<div class="bubble" style="left:40%; animation-delay:5s;"></div>
+<div class="bubble" style="left:70%; animation-delay:10s;"></div>
 
+<header>
+  <img src="logo.png" class="logo">
   <h1>Fresh baked happiness, every day</h1>
   <p class="tagline">Little Bread Rising Hood</p>
-
   <p class="subtext">
     handcrafted treats made with simple ingredients and a whole lot of love – ready for your table
   </p>
 </header>
 
 <section>
-  <h2>🍞 Our Bakes</h2>
-  <div class="menu">
-    <div class="card">Sourdough Loaves</div>
-    <div class="card">Seasonal Muffins</div>
-    <div class="card">Cookies & Sweet Treats</div>
-    <div class="card">Cinnamon Rolls</div>
+  <div class="card drop">
+    🌸 This Week’s Drop:  
+    Pre-orders open Thursday • Pickup Sunday  
+    Limited quantities – first come, first served
   </div>
 </section>
 
 <section>
-  <h2>💲 Pricing</h2>
-  <div class="pricing card">
-    <p><strong>Plain Loaves:</strong> $9</p>
-    <p><strong>Premium Loaves:</strong> $14</p>
-    <p><strong>Basic Cookies:</strong> $3</p>
-    <p><strong>Premium Cookies:</strong> $3.50</p>
-    <p><strong>Muffins:</strong> ~$5</p>
-    <p><strong>Cinnamon Rolls (4-pack):</strong> $18</p>
+  <h2>🍞 Pricing</h2>
+  <div class="card">
+    <p>Plain Loaves — $9</p>
+    <p>Premium Loaves — $14</p>
+    <p>Cookies — $3 / $3.50</p>
+    <p>Muffins — $5</p>
+    <p>Cinnamon Rolls (4-pack) — $18</p>
   </div>
 </section>
 
 <section>
-  <h2>🧁 Place an Order</h2>
-  <div class="order">
-    <form>
-      <label>Name</label>
-      <input type="text" placeholder="Your name">
-
-      <label>Email or Instagram</label>
-      <input type="text" placeholder="How should I contact you?">
-
-      <label>Your Order</label>
-      <textarea rows="4" placeholder="What would you like?"></textarea>
-
-      <button type="submit">Submit Order Request</button>
+  <h2>🧁 Order</h2>
+  <div class="card">
+    <form action="PASTE-YOUR-FORMSPREE-LINK-HERE" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="order" placeholder="What would you like?" required></textarea>
+      <button type="submit">Send Order Request</button>
     </form>
-
-    <p style="text-align:center; margin-top:15px;">
-      or message me directly:
-    </p>
 
     <div class="social">
       <a href="https://www.instagram.com/little.bread.rising.hood" target="_blank">Instagram</a>
@@ -192,35 +167,6 @@ footer {
     </div>
   </div>
 </section>
-
-<section>
-  <h2>🌿 About</h2>
-  <div class="about">
-    <p>
-    Little Bread Rising Hood was born from a simple idea: slow down, bake with intention, and share something real.
-    </p>
-
-    <p>
-    I’m a home baker based in Milwaukie, Oregon, creating small-batch sourdough and baked goods using traditional methods and quality ingredients. What started as a personal passion quickly grew into something more—a way to connect with my community through food that’s made by hand, not by machines.
-    </p>
-
-    <p>
-    Every loaf is naturally leavened, long-fermented, and baked with care. I believe good bread shouldn’t be rushed, and you can taste the difference.
-    </p>
-
-    <p>
-    This bakery is also part of a bigger dream: building a more intentional life centered around family, sustainability, and eventually a homestead of my own. Little Bread Rising Hood is the first step in that journey.
-    </p>
-
-    <p>
-    Thank you for supporting small, local, and handmade—it truly matters.
-    </p>
-  </div>
-</section>
-
-<footer>
-  Made with love in Milwaukie, Oregon ✨
-</footer>
 
 </body>
 </html>
