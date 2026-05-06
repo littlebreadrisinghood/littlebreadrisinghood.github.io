@@ -1,95 +1,226 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Little Bread Rising Hood</title>
-  <style>
-    body {
-      font-family: Georgia, serif;
-      background-color: #f7f3ee;
-      color: #3e2f25;
-      margin: 0;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<title>Little Bread Rising Hood</title>
 
-    header {
-      background-color: #d8bfa9;
-      padding: 40px 20px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
 
-    h1 {
-      margin: 0;
-      font-size: 3em;
-      letter-spacing: 1px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #fdfaf7;
+  color: #4b3f3a;
+}
 
-    .tagline {
-      font-style: italic;
-      margin-top: 10px;
-    }
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(135deg, #ffe5d9, #e4d7ff, #d6ecff);
+}
 
-    section {
-      padding: 40px 20px;
-      max-width: 700px;
-      margin: auto;
-    }
+.logo {
+  max-width: 120px;
+  margin-bottom: 15px;
+}
 
-    h2 {
-      margin-bottom: 15px;
-    }
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin: 0;
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+.tagline {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
 
-    li {
-      padding: 8px 0;
-      font-size: 1.1em;
-    }
+.subtext {
+  max-width: 500px;
+  margin: 15px auto;
+  font-size: 0.95em;
+  opacity: 0.8;
+}
 
-    .order-box {
-      background-color: #fffaf5;
-      border: 2px dashed #d8bfa9;
-      padding: 20px;
-      border-radius: 10px;
-    }
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
 
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 0.9em;
-      opacity: 0.7;
-    }
-  </style>
+h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.menu, .pricing {
+  display: grid;
+  gap: 15px;
+  text-align: center;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.pricing p {
+  margin: 6px 0;
+}
+
+.about {
+  line-height: 1.7;
+  background: #fffaf5;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.order {
+  background: #f7f1ff;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  background: #e8c7ff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #dcb3ff;
+}
+
+.social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #6b5c55;
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Little Bread Rising Hood</h1>
-    <p class="tagline">Small-batch sourdough baked with love</p>
-  </header>
+<header>
+  <!-- REPLACE src WITH YOUR LOGO FILE -->
+  <img src="logo.png" class="logo" alt="Logo">
 
-  <section>
-    <h2>🍞 Weekly Menu</h2>
-    <ul>
-      <li>Classic Sourdough Loaf</li>
-      <li>Rosemary Garlic Loaf</li>
-      <li>Seasonal Muffins</li>
-      <li>Chocolate Chip Cookies</li>
-    </ul>
-  </section>
+  <h1>Fresh baked happiness, every day</h1>
+  <p class="tagline">Little Bread Rising Hood</p>
 
-  <section class="order-box">
-    <h2>🧁 How to Order</h2>
-    <p>Pre-orders open weekly.</p>
-    <p>Send me a message on Instagram or email to claim your bake!</p>
-    <p><strong>Pickup in Portland</strong></p>
-  </section>
+  <p class="subtext">
+    handcrafted treats made with simple ingredients and a whole lot of love – ready for your table
+  </p>
+</header>
 
-  <footer>
-    <p>Follow along for weekly drops 🍪</p>
-  </footer>
+<section>
+  <h2>🍞 Our Bakes</h2>
+  <div class="menu">
+    <div class="card">Sourdough Loaves</div>
+    <div class="card">Seasonal Muffins</div>
+    <div class="card">Cookies & Sweet Treats</div>
+    <div class="card">Cinnamon Rolls</div>
+  </div>
+</section>
+
+<section>
+  <h2>💲 Pricing</h2>
+  <div class="pricing card">
+    <p><strong>Plain Loaves:</strong> $9</p>
+    <p><strong>Premium Loaves:</strong> $14</p>
+    <p><strong>Basic Cookies:</strong> $3</p>
+    <p><strong>Premium Cookies:</strong> $3.50</p>
+    <p><strong>Muffins:</strong> ~$5</p>
+    <p><strong>Cinnamon Rolls (4-pack):</strong> $18</p>
+  </div>
+</section>
+
+<section>
+  <h2>🧁 Place an Order</h2>
+  <div class="order">
+    <form>
+      <label>Name</label>
+      <input type="text" placeholder="Your name">
+
+      <label>Email or Instagram</label>
+      <input type="text" placeholder="How should I contact you?">
+
+      <label>Your Order</label>
+      <textarea rows="4" placeholder="What would you like?"></textarea>
+
+      <button type="submit">Submit Order Request</button>
+    </form>
+
+    <p style="text-align:center; margin-top:15px;">
+      or message me directly:
+    </p>
+
+    <div class="social">
+      <a href="https://www.instagram.com/little.bread.rising.hood" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/share/18kgkaYaKB/" target="_blank">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🌿 About</h2>
+  <div class="about">
+    <p>
+    Little Bread Rising Hood was born from a simple idea: slow down, bake with intention, and share something real.
+    </p>
+
+    <p>
+    I’m a home baker based in Milwaukie, Oregon, creating small-batch sourdough and baked goods using traditional methods and quality ingredients. What started as a personal passion quickly grew into something more—a way to connect with my community through food that’s made by hand, not by machines.
+    </p>
+
+    <p>
+    Every loaf is naturally leavened, long-fermented, and baked with care. I believe good bread shouldn’t be rushed, and you can taste the difference.
+    </p>
+
+    <p>
+    This bakery is also part of a bigger dream: building a more intentional life centered around family, sustainability, and eventually a homestead of my own. Little Bread Rising Hood is the first step in that journey.
+    </p>
+
+    <p>
+    Thank you for supporting small, local, and handmade—it truly matters.
+    </p>
+  </div>
+</section>
+
+<footer>
+  Made with love in Milwaukie, Oregon ✨
+</footer>
 
 </body>
 </html>
