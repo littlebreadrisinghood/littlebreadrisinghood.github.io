@@ -15,7 +15,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ✨ FLOATING MAGIC */
+/* FLOATING */
 .bubble {
   position: fixed;
   width: 18px;
@@ -23,62 +23,46 @@ body {
   background: rgba(255, 200, 230, 0.35);
   border-radius: 50%;
   animation: float 22s infinite ease-in-out;
-  z-index: 0;
 }
 
 @keyframes float {
-  0% { transform: translateY(110vh) scale(0.6); opacity: 0; }
-  20% { opacity: 0.6; }
-  100% { transform: translateY(-10vh) scale(1.1); opacity: 0; }
+  0% { transform: translateY(110vh); opacity:0; }
+  20% { opacity:0.6; }
+  100% { transform: translateY(-10vh); opacity:0; }
 }
 
 /* HEADER */
 header {
   text-align: center;
-  padding: 70px 20px 50px;
+  padding: 70px 20px;
   background: linear-gradient(135deg, #ffe5d9, #e4d7ff, #d6ecff);
-  position: relative;
-  z-index: 1;
 }
 
-.logo {
-  max-width: 120px;
-  margin-bottom: 10px;
-}
+.logo { max-width: 120px; }
 
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3em;
-  margin: 0;
-}
-
-.tagline {
-  font-size: 1.2em;
-  margin-top: 10px;
 }
 
 .subtext {
   max-width: 550px;
-  margin: 15px auto 0;
-  opacity: 0.85;
+  margin: auto;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
   padding: 50px 20px;
   max-width: 900px;
   margin: auto;
-  position: relative;
-  z-index: 1;
 }
 
 h2 {
-  font-family: 'Playfair Display', serif;
   text-align: center;
-  margin-bottom: 25px;
+  font-family: 'Playfair Display', serif;
 }
 
-/* CARD STYLE */
+/* CARD */
 .card {
   background: white;
   border-radius: 18px;
@@ -86,21 +70,26 @@ h2 {
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* WEEKLY DROP */
-.drop {
-  background: #fff0f6;
+/* SLIDER */
+.slider {
   text-align: center;
   font-style: italic;
+  background: #fff0f6;
+}
+
+/* SOLD OUT */
+.soldout {
+  opacity: 0.5;
+  text-decoration: line-through;
 }
 
 /* FORM */
-input, textarea {
+input, select, textarea {
   width: 100%;
   padding: 12px;
   margin-top: 10px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  font-family: inherit;
 }
 
 button {
@@ -110,135 +99,130 @@ button {
   background: #e8c7ff;
   border: none;
   border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.2s ease;
 }
 
-button:hover {
-  background: #dcb3ff;
-  transform: translateY(-1px);
+/* ABOUT ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s ease;
 }
 
-/* SOCIAL */
-.social {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.social a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #6b5c55;
-  font-weight: 500;
-}
-
-/* ABOUT */
-.about {
-  line-height: 1.75;
-  text-align: left;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 0.85em;
-  opacity: 0.7;
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 </style>
 </head>
 
 <body>
 
-<!-- floating bubbles -->
-<div class="bubble" style="left:10%; animation-delay:0s;"></div>
-<div class="bubble" style="left:25%; animation-delay:4s;"></div>
-<div class="bubble" style="left:50%; animation-delay:8s;"></div>
-<div class="bubble" style="left:70%; animation-delay:2s;"></div>
-<div class="bubble" style="left:85%; animation-delay:6s;"></div>
+<!-- FLOATING -->
+<div class="bubble" style="left:10%"></div>
+<div class="bubble" style="left:40%; animation-delay:5s;"></div>
+<div class="bubble" style="left:70%; animation-delay:10s;"></div>
 
 <header>
-  <img src="logo.png" class="logo" alt="Logo">
-
-  <h1>Fresh baked happiness, every day</h1>
-  <p class="tagline">Little Bread Rising Hood</p>
-
-  <p class="subtext">
-    handcrafted treats made with simple ingredients and a whole lot of love – ready for your table
-  </p>
+<img src="logo.png" class="logo">
+<h1>Fresh baked happiness, every day</h1>
+<p class="subtext">handcrafted treats made with simple ingredients and a whole lot of love – ready for your table</p>
 </header>
 
 <section>
-  <div class="card drop">
-    🌸 This Week’s Drop: Pre-orders open Thursday • Pickup Sunday • Limited batches only
-  </div>
+<div class="card slider" id="slider">
+🌸 Pre-orders open Thursday • Pickup Sunday
+</div>
 </section>
 
 <section>
-  <h2>🍞 Pricing</h2>
-  <div class="card">
-    <p><strong>Plain Loaves:</strong> $9</p>
-    <p><strong>Premium Loaves:</strong> $14</p>
-    <p><strong>Basic Cookies:</strong> $3</p>
-    <p><strong>Premium Cookies:</strong> $3.50</p>
-    <p><strong>Muffins:</strong> ~$5</p>
-    <p><strong>Cinnamon Rolls (4-pack):</strong> $18</p>
-  </div>
+<h2>🍞 Weekly Menu</h2>
+<div class="card">
+<p>Classic Sourdough</p>
+<p class="soldout">Rosemary Garlic (Sold Out)</p>
+<p>Chocolate Chip Cookies</p>
+<p>Muffins</p>
+</div>
 </section>
 
 <section>
-  <h2>🌿 About</h2>
-  <div class="card about">
-    <p>
-      Little Bread Rising Hood was born from a simple idea: slow down, bake with intention, and share something real.
-    </p>
+<h2>💲 Pricing</h2>
+<div class="card">
+<p>Plain Loaves — $9</p>
+<p>Premium Loaves — $14</p>
+<p>Cookies — $3 / $3.50</p>
+<p>Muffins — $5</p>
+<p>Cinnamon Rolls (4-pack) — $18</p>
+</div>
+</section>
 
-    <p>
-      I’m a home baker based in Milwaukie, Oregon, creating small-batch sourdough and baked goods using traditional methods and quality ingredients. What started as a personal passion quickly grew into something more—a way to connect with my community through food that’s made by hand, not by machines.
-    </p>
+<section class="fade" id="about">
+<h2>🌿 About</h2>
+<div class="card">
+<p>Little Bread Rising Hood was born from a simple idea: slow down, bake with intention, and share something real.</p>
 
-    <p>
-      Every loaf is naturally leavened, long-fermented, and baked with care. I believe good bread shouldn’t be rushed, and you can taste the difference.
-    </p>
+<p>I’m a home baker based in Milwaukie, Oregon...</p>
 
-    <p>
-      This bakery is also part of a bigger dream: building a more intentional life centered around family, sustainability, and eventually a homestead of my own. Little Bread Rising Hood is the first step in that journey.
-    </p>
+<p>Every loaf is naturally leavened, long-fermented...</p>
 
-    <p>
-      Thank you for supporting small, local, and handmade—it truly matters.
-    </p>
-  </div>
+<p>This bakery is part of a bigger dream...</p>
+</div>
 </section>
 
 <section>
-  <h2>🧁 Order</h2>
-  <div class="card">
+<h2>🧁 Order</h2>
+<div class="card">
 
-    <form action="https://formspree.io/f/xbdwykyq" method="POST">
-      <input type="text" name="name" placeholder="Your name" required>
+<form action="https://formspree.io/f/xbdwykyq" method="POST">
 
-      <input type="email" name="email" placeholder="Your email" required>
+<input type="text" name="name" placeholder="Your name" required>
 
-      <input type="text" name="contact" placeholder="Instagram (optional)">
+<input type="email" name="email" placeholder="Your email" required>
 
-      <textarea name="order" placeholder="What would you like? (items, quantities, pickup day)" required></textarea>
+<select name="items">
+<option>Choose your items</option>
+<option>Sourdough Loaf</option>
+<option>Premium Loaf</option>
+<option>Cookies</option>
+<option>Muffins</option>
+<option>Cinnamon Rolls</option>
+</select>
 
-      <button type="submit">Send Order Request</button>
-    </form>
+<input type="date" name="pickup">
 
-    <div class="social">
-      <a href="https://www.instagram.com/little.bread.rising.hood" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/share/18kgkaYaKB/" target="_blank">Facebook</a>
-    </div>
+<textarea name="order" placeholder="Anything else? quantities, notes"></textarea>
 
-  </div>
+<input type="hidden" name="_next" value="https://littlebreadrisinghood.github.io/thank-you.html">
+
+<button type="submit">Send Order</button>
+
+</form>
+
+</div>
 </section>
 
-<footer>
-  Made with love in Milwaukie, Oregon ✨
-</footer>
+<script>
+/* SLIDER */
+const messages = [
+"🌸 Pre-orders open Thursday • Pickup Sunday",
+"🍞 Small batch • Fresh baked",
+"✨ Made with love & slow fermentation"
+];
+
+let i = 0;
+setInterval(() => {
+  i = (i + 1) % messages.length;
+  document.getElementById("slider").innerText = messages[i];
+}, 3000);
+
+/* FADE IN */
+const about = document.getElementById("about");
+window.addEventListener("scroll", () => {
+  const pos = about.getBoundingClientRect().top;
+  if (pos < window.innerHeight - 100) {
+    about.classList.add("show");
+  }
+});
+</script>
 
 </body>
 </html>
