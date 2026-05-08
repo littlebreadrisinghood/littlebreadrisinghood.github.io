@@ -180,7 +180,29 @@ button {
 .social a:hover {
   background: #f7d8ea;
   transform: translateY(-2px);
-} 
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: translateY(-4px);
+}
+  
 </style>
 </head>
 
@@ -269,6 +291,19 @@ button {
   </div>
 </section>
 
+<section>
+  <h2>📸 Gallery</h2>
+
+  <div class="gallery">
+
+    <img src="gallery1.jpg" alt="Sourdough loaf">
+    <img src="gallery2.jpg" alt="Fresh muffins">
+    <img src="gallery3.jpg" alt="Cookies">
+    <img src="gallery4.jpg" alt="Cinnamon rolls">
+
+  </div>
+</section>
+  
 <section>
 <h2>🧁 Order</h2>
 <div class="card">
