@@ -260,8 +260,8 @@ button {
 <p>Premium Inclusion Sourdough Loaf — $12</p>
 <p>Cookies — $3.50ea - $12.50/4-pk </p>
 <p>Muffins — $4ea - $15/4-pk </p>
-<p>Sweet Rolls (4-pack) — $16</p>
-<p>Brookies — $4.50ea - $16/4pk</p>
+<p>Sweet Rolls — $16/4-pk</p>
+<p>Brookies — $4.50ea - $16/4-pk</p>
 </div>
 </section>
 
@@ -297,9 +297,11 @@ button {
   <div class="gallery">
 
     <img src="gallery1.jpg" alt="Sourdough loaf">
-    <img src="gallery2.jpg" alt="Fresh muffins">
+    <img src="gallery2.jpg" alt="Sourdough Inclusion loaf">
     <img src="gallery3.jpg" alt="Cookies">
-    <img src="gallery4.jpg" alt="Cinnamon rolls">
+    <img src="gallery4.jpg" alt="Muffins">
+    <img src="gallery5.jpg" alt="Sweet rolls">
+    <img src="gallery6.jpg" alt="Specialties">
 
   </div>
 </section>
@@ -317,13 +319,17 @@ button {
 <select name="items">
 <option>Choose your items</option>
 <option>Sourdough Loaf</option>
-<option>Premium Loaf</option>
+<option>Premium Sourdough Loaf</option>
 <option>Cookies</option>
 <option>Muffins</option>
-<option>Cinnamon Rolls</option>
+<option>Sweet Rolls</option>
+<option>Brookies</option>
 </select>
 
-<input type="date" name="pickup">
+<input type="date" id="pickup" name="pickup" required>
+<p id="dateMsg" style="font-size:0.85em; opacity:0.7; margin-top:5px;">
+  Pickup is only available on Sundays
+</p>
 
 <textarea name="order" placeholder="Anything else? quantities, flavors, notes"></textarea>
 
@@ -356,5 +362,21 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
+<script>
+const pickup = document.getElementById("pickup");
+const msg = document.getElementById("dateMsg");
+
+// Block non-Sundays
+pickup.addEventListener("change", function () {
+  const date = new Date(this.value);
+  const day = date.getDay(); // Sunday = 0
+
+  if (day !== 0) {
+    alert("Pickup is only available on Sundays 🌸 Please select a Sunday.");
+    this.value = "";
+  }
+});
+</script>
+  
 </body>
 </html>
