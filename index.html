@@ -265,7 +265,7 @@ button {
 </div>
 </section>
 
-<section>
+<section id="about" class="fade">
   <h2>🌿 About</h2>
 
   <div class="card" style="text-align:left; line-height:1.7;">
@@ -326,10 +326,13 @@ button {
 <option>Brookies</option>
 </select>
 
-<input type="date" id="pickup" name="pickup" required>
-<p id="dateMsg" style="font-size:0.85em; opacity:0.7; margin-top:5px;">
-  Pickup is available on Saturdays
-</p>
+<select name="pickup" required>
+  <option value="">Choose your pickup Saturday</option>
+  <option>Saturday, June 7</option>
+  <option>Saturday, June 14</option>
+  <option>Saturday, June 21</option>
+  <option>Saturday, June 28</option>
+</select>
 
 <textarea name="order" placeholder="Anything else? quantities, flavors, notes"></textarea>
 
