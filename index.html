@@ -369,9 +369,9 @@ const msg = document.getElementById("dateMsg");
 // Block non-Saturdays
 pickup.addEventListener("change", function () {
   const date = new Date(this.value);
-  const day = date.getDay(); // Saturday = 0
+  const day = date.getDay(); // Saturday = 6
 
-  if (day !== 0) {
+  if (day !== 6) {
     alert("Pickup is available on Saturdays 🌸 Please select a Saturday.");
     this.value = "";
   }
