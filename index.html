@@ -202,6 +202,29 @@ button {
 .gallery img:hover {
   transform: translateY(-4px);
 }
+
+ .order-items {
+  margin-top: 15px;
+}
+
+.order-items p {
+  margin-bottom: 10px;
+}
+
+.order-items label {
+  display: block;
+  background: #fffaf7;
+  border: 1px solid #f0d8e6;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.order-items input {
+  width: auto;
+  margin-right: 8px;
+} 
   
 </style>
 </head>
@@ -316,15 +339,54 @@ button {
 
 <input type="email" name="email" placeholder="Your email" required>
 
-<select name="items">
-<option>Choose your items</option>
-<option>Sourdough Loaf</option>
-<option>Premium Sourdough Loaf</option>
-<option>Cookies</option>
-<option>Muffins</option>
-<option>Sweet Rolls</option>
+<div class="order-items">
+  <p><strong>What would you like to order?</strong></p>
 
-</select>
+  <label>
+    <input type="checkbox" name="items" value="Classic Sourdough Loaf">
+    Classic Sourdough Loaf
+  </label>
+
+  <label>
+    <input type="checkbox" name="items" value="Roasted Garlic & Herb Sourdough">
+    Roasted Garlic & Herb Sourdough
+  </label>
+
+  <label>
+    <input type="checkbox" name="items" value="Cinnamon Swirl Sourdough">
+    Cinnamon Swirl Sourdough
+  </label>
+
+  <label>
+    <input type="checkbox" name="items" value="Brown Butter Chocolate Chip Cookies">
+    Brown Butter Chocolate Chip Cookies
+  </label>
+
+  <label>
+    <input type="checkbox" name="items" value="Oatmeal Craisin White Chocolate Cookies">
+    Oatmeal Craisin White Chocolate Cookies
+  </label>
+
+  <label>
+    <input type="checkbox" name="items" value="Lemon Poppyseed Streusel Muffins">
+    Lemon Poppyseed Streusel Muffins
+  </label>
+
+  <label>
+    <input type="checkbox" name="items" value="Blackberry Vanilla Bean Muffins">
+    Blackberry Vanilla Bean Muffins
+  </label>
+
+  <label>
+    <input type="checkbox" name="items" value="Orange Dream Sweet Rolls">
+    Orange Dream Sweet Rolls
+  </label>
+
+  <label>
+    <input type="checkbox" name="items" value="Peanut Butter Brookies">
+    Peanut Butter Brookies
+  </label>
+</div>
 
 <select name="pickup" required>
   <option value="">Choose your pickup Saturday</option>
