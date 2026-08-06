@@ -2,153 +2,374 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+  name="description"
+  content="Little Bread Rising Hood offers artisan sourdough bread and small-batch baked goods in Milwaukie, Oregon."
+>
+
 <title>Little Bread Rising Hood</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@300;400;500;600&display=swap"
+  rel="stylesheet"
+>
 
-
-  
 <style>
+:root {
+  --cream: #fbf6ef;
+  --warm-cream: #f4eadc;
+  --card: #fffaf3;
+  --sage: #737b68;
+  --dark-sage: #3f4635;
+  --terracotta: #b86b4b;
+  --tan: #e7ddc9;
+  --border: #d8cbb8;
+}
+
+/* GENERAL */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(to bottom, #fbf6ef, #f4eadc);
-  color: #3f4635;
+  background: linear-gradient(to bottom, var(--cream), var(--warm-cream));
+  color: var(--dark-sage);
   overflow-x: hidden;
 }
 
-/* FLOATING */
+section {
+  max-width: 950px;
+  margin: auto;
+  padding: 55px 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h3 {
+  margin-top: 0;
+  color: var(--terracotta);
+}
+
+a {
+  color: inherit;
+}
+
+/* FLOATING BUBBLES */
 .bubble {
   position: fixed;
+  z-index: -1;
   width: 18px;
   height: 18px;
-  background: rgba(184, 107, 75, 0.18);
+  background: rgba(184, 107, 75, 0.16);
   border-radius: 50%;
   animation: float 22s infinite ease-in-out;
 }
 
 @keyframes float {
-  0% { transform: translateY(110vh); opacity:0; }
-  20% { opacity:0.6; }
-  100% { transform: translateY(-10vh); opacity:0; }
+  0% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
 }
 
-/* HEADER */
-header {
-  text-align: center;
-  padding: 70px 20px;
-  background: linear-gradient(135deg, #fbf6ef, #e8ddd0, #d8d2c8);
-}
-
-.logo {
-  max-width: 200px;
-  margin-bottom: 15px;
-}
-
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3em;
-}
-
-.subtext {
-  max-width: 550px;
-  margin: auto;
-}
-
-/* HERO LAYOUT */
+/* HERO */
 .hero {
-  background: linear-gradient(135deg, #fbf6ef, #e8ddd0, #d8d2c8);
-  padding: 60px 20px;
+  padding: 70px 20px;
+  background: linear-gradient(
+    135deg,
+    #fbf6ef,
+    #e8ddd0,
+    #d8d2c8
+  );
 }
 
 .hero-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 45px;
   max-width: 1000px;
   margin: auto;
 }
 
-/* LEFT (LOGO) */
 .hero-left .logo {
-  max-width: 180px;
+  display: block;
+  width: 100%;
+  max-width: 190px;
 }
 
-/* RIGHT (TEXT) */
 .hero-right {
+  max-width: 540px;
   text-align: left;
-  max-width: 500px;
 }
 
 .hero-right h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8em;
   margin: 0;
+  font-size: 3rem;
+  line-height: 1.1;
 }
 
 .brand-name {
-  font-size: 1.3em;
-  margin: 10px 0 5px;
-  font-weight: 500;
+  margin: 12px 0 8px;
+  color: var(--terracotta);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  font-weight: 600;
 }
 
 .subtext {
-  font-size: 0.95em;
-  opacity: 0.85;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.88;
 }
-  
-/* SECTION */
-section {
-  padding: 50px 20px;
+
+/* ANNOUNCEMENT */
+.stand-info {
   max-width: 900px;
+  margin: 35px auto 0;
+  padding: 0 20px;
+}
+
+.stand-card {
+  padding: 25px;
+  border: 1px solid #d1c4ae;
+  border-radius: 18px;
+  background: var(--tan);
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(63, 70, 53, 0.06);
+}
+
+.stand-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+}
+
+.stand-card p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* CARDS */
+.card {
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 12px 28px rgba(63, 70, 53, 0.08);
+}
+
+/* MENU */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.menu-category {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 8px 20px rgba(63, 70, 53, 0.06);
+}
+
+.menu-category h3 {
+  margin-bottom: 15px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--border);
+}
+
+.menu-category p {
+  margin: 9px 0;
+  line-height: 1.5;
+}
+
+/* PRICES */
+.price-list {
+  max-width: 700px;
   margin: auto;
 }
 
-h2 {
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e5dbcc;
+}
+
+.price-row:last-child {
+  border-bottom: none;
+}
+
+.price-row span:last-child {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--terracotta);
+}
+
+/* ORDERING */
+.order-intro {
+  margin-bottom: 25px;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  line-height: 1.7;
 }
 
-/* CARD */
-.card {
-  background: #fffaf3;
-  border: 1px solid #d8cbb8;
-  border-radius: 18px;
-  padding: 24px;
-  box-shadow: 0 12px 28px rgba(63,70,53,0.08);
-}
-/* SLIDER */
-.slider {
-  text-align: center;
-  font-style: italic;
-  background: #fff0f6;
-}
-
-
-
-/* FORM */
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
+.order-notice {
+  margin-bottom: 25px;
+  padding: 18px;
+  border-left: 5px solid var(--terracotta);
   border-radius: 10px;
-  border: 1px solid #ddd;
+  background: #f4eadc;
+  line-height: 1.7;
 }
 
+.order-notice p {
+  margin: 5px 0;
+}
+
+.form-section {
+  margin-top: 28px;
+}
+
+.form-section h3 {
+  margin-bottom: 12px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label.main-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 7px;
+  padding: 13px;
+  border: 1px solid #cfc5b6;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--dark-sage);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--terracotta);
+  outline: 2px solid rgba(184, 107, 75, 0.12);
+}
+
+/* ORDER ITEMS */
+.order-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.order-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--cream);
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.order-option:hover {
+  border-color: var(--terracotta);
+}
+
+.order-option input {
+  width: auto;
+  margin: 3px 0 0;
+  flex-shrink: 0;
+}
+
+.quantity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* BUTTONS */
 button {
-  margin-top: 15px;
-  padding: 12px;
   width: 100%;
-  background: #b86b4b;
-  color: #fffaf3;
+  margin-top: 10px;
+  padding: 14px 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 11px;
+  background: var(--terracotta);
+  color: #fffaf3;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.25s ease;
 }
 
-/* ABOUT ANIMATION */
+button:hover {
+  background: #9f583d;
+  transform: translateY(-2px);
+}
+
+/* ABOUT */
+.about-text {
+  text-align: left;
+  line-height: 1.8;
+}
+
 .fade {
   opacity: 0;
   transform: translateY(20px);
@@ -158,29 +379,6 @@ button {
 .fade.show {
   opacity: 1;
   transform: translateY(0);
-}
-
- /* SOCIAL LINKS */
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 25px;
-}
-
-.social a {
-  text-decoration: none;
-  color: #fffaf3;
-  font-weight: 500;
-  padding: 10px 18px;
-  border-radius: 20px;
-  background: #737b68;
-  transition: 0.25s ease;
-}
-
-.social a:hover {
-  background: #b86b4b;
-  transform: translateY(-2px);
 }
 
 /* GALLERY */
@@ -197,7 +395,7 @@ button {
   object-fit: cover;
   object-position: center;
   border-radius: 22px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
   transition: 0.3s ease;
 }
 
@@ -205,186 +403,617 @@ button {
   transform: translateY(-4px);
 }
 
-/* Mobile */
-@media (max-width: 700px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
+/* FOOTER */
+footer {
+  margin-top: 45px;
+  padding: 45px 20px 30px;
+  background: var(--dark-sage);
+  color: var(--cream);
+  text-align: center;
 }
 
- .order-items {
-  margin-top: 15px;
-}
-
-.order-items p {
+footer h2 {
   margin-bottom: 10px;
 }
 
-.order-items label {
-  display: block;
-  background: #fbf6ef;
-  border: 1px solid #d8cbb8;
-  border-radius: 12px;
-  padding: 10px 12px;
-  margin-top: 8px;
-  cursor: pointer;
+.footer-text {
+  margin: 0 auto 25px;
+  opacity: 0.85;
 }
 
-.order-items input {
-  width: auto;
-  margin-right: 8px;
-} 
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
 
+.social a {
+  min-width: 135px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 250, 243, 0.3);
+  border-radius: 25px;
+  background: var(--sage);
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.social a:hover {
+  border-color: var(--terracotta);
+  background: var(--terracotta);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  opacity: 0.65;
+}
+
+/* MOBILE */
 @media (max-width: 700px) {
+  section {
+    padding: 42px 16px;
+  }
+
+  .hero {
+    padding: 50px 20px;
+  }
+
   .hero-content {
     flex-direction: column;
+    gap: 25px;
     text-align: center;
   }
 
   .hero-right {
     text-align: center;
   }
+
+  .hero-right h1 {
+    font-size: 2.35rem;
+  }
+
+  .menu-grid,
+  .gallery,
+  .order-items,
+  .quantity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 300px;
+  }
+
+  .price-row {
+    flex-direction: column;
+    gap: 4px;
+  }
 }
-  
 </style>
 </head>
 
 <body>
 
-<!-- FLOATING -->
-<div class="bubble" style="left:10%"></div>
-<div class="bubble" style="left:40%; animation-delay:5s;"></div>
-<div class="bubble" style="left:70%; animation-delay:10s;"></div>
+<!-- FLOATING BACKGROUND BUBBLES -->
+<div class="bubble" style="left: 10%;"></div>
 
+<div
+  class="bubble"
+  style="left: 40%; animation-delay: 5s;"
+></div>
+
+<div
+  class="bubble"
+  style="left: 70%; animation-delay: 10s;"
+></div>
+
+<!-- HERO -->
 <header class="hero">
-  
   <div class="hero-content">
 
     <div class="hero-left">
-      <img src="logo.png" class="logo" alt="Logo">
+      <img
+        src="logo.png"
+        class="logo"
+        alt="Little Bread Rising Hood logo"
+      >
     </div>
 
     <div class="hero-right">
-      <h1>Fresh Baked Happiness</h1>
-      <p class="brand-name">Little Bread Rising Hood</p>
+      <h1>Little Bread Rising Hood</h1>
+
+      <p class="brand-name">
+        Fresh Baked Happiness
+      </p>
+
       <p class="subtext">
-        handcrafted treats made with simple ingredients and a whole lot of love
+        Artisan Sourdough Bread and Small Batch Bakes
       </p>
     </div>
 
   </div>
-
 </header>
 
-<section>
-<div class="card" style="text-align:center; background:#e7ddc9;">
-  Neighborhood bake stand open Fridays 7am - 6pm
-  Pre-orders currently unavailable
+<!-- BAKE STAND INFORMATION -->
+<div class="stand-info">
+  <div class="stand-card">
+    <strong>Neighborhood Bake Stand</strong>
+
+    <p>
+      Open Fridays from 7:00 AM–6:00 PM
+    </p>
+
+    <p>
+      📍 YOUR BAKE STAND ADDRESS HERE
+    </p>
+
+    <p>
+      Preorders close Tuesdays and may be picked up Fridays
+      at the bake stand between 8:00 AM–4:00 PM.
+    </p>
+  </div>
 </div>
-</section>
 
+<!-- CURRENT MENU -->
 <section>
-<h2> Current Menu </h2>
-<div class="card">
-<p>Classic Sourdough</p>
-<p>Roasted Garlic & Chive Sourdough</p>
-<p>Garden Harvest Sourdough</p>
-<p>Cheddar and Fire Roasted Chilis Sourdough</p>
-<p>Brown Butter Salted Chocolate Chip Cookies</p>
-<p>Oatmeal Craisin White Chocolate Cookies</p>
-<p>Strawberrt Shortcake Cookies</p>
-<p>Blueberry Lemon Streusel Muffins</p>
-<p>Blackberry Vanilla Bean Muffins</p>
-<p>Cinnamon Rolls</p>
+  <h2>Current Menu</h2>
 
-</div>
-</section>
+  <div class="menu-grid">
 
-<section>
-<h2> Prices  </h2>
-<div class="card">
-<p>Plain Sourdough Loaf — $10</p>
-<p>Premium Inclusion Sourdough Loaf — $13</p>
-<p>Cookies — $3 each • $8 / 3-pack</p>
-<p>Muffins — $7.50 / 2-pack • $14 / 4-pack</p>
-<p>Cinnamon Rolls — $5 each • $18 / 4-pack</p>
+    <div class="menu-category">
+      <h3>Sourdough Bread</h3>
 
+      <p>Classic Sourdough</p>
+      <p>Roasted Garlic &amp; Chive Sourdough</p>
+      <p>Garden Harvest Sourdough</p>
+      <p>Cheddar &amp; Fire-Roasted Chili Sourdough</p>
+    </div>
 
-</div>
-</section>
+    <div class="menu-category">
+      <h3>Cookies</h3>
 
-<section id="about" class="fade">
-  <h2>🌿 About</h2>
+      <p>Brown Butter Salted Chocolate Chip Cookies</p>
+      <p>Oatmeal Craisin White Chocolate Cookies</p>
+      <p>Strawberry Shortcake Cookies</p>
+    </div>
 
-  <div class="card" style="text-align:left; line-height:1.7;">
-    <p>
-      Little Bread Rising Hood was born from a simple idea: slow down, bake with intention, and share something real.
-    </p>
+    <div class="menu-category">
+      <h3>Muffins</h3>
 
-    <p>
-      I’m a home baker based in Milwaukie, Oregon, creating small-batch sourdough and baked goods using traditional methods and quality ingredients. What started as a personal passion quickly grew into something more—a way to connect with my community through food that’s made by hand, not by machines.
-    </p>
+      <p>Blueberry Lemon Streusel Muffins</p>
+      <p>Blackberry Vanilla Bean Muffins</p>
+    </div>
 
-    <p>
-      Every loaf is naturally leavened, long-fermented, and baked with care. I believe good bread shouldn’t be rushed, and you can taste the difference.
-    </p>
+    <div class="menu-category">
+      <h3>Sweet Bakes</h3>
 
-    <p>
-      This bakery is also part of a bigger dream: building a more intentional life centered around family, sustainability, and eventually a homestead of my own. Little Bread Rising Hood is the first step in that journey.
-    </p>
+      <p>Cinnamon Rolls</p>
+    </div>
 
-    <p>
-      Thank you for supporting small, local, and handmade—it truly matters.
-    </p>
   </div>
 </section>
 
+<!-- PRICES -->
+<section>
+  <h2>Prices</h2>
+
+  <div class="card price-list">
+
+    <div class="price-row">
+      <span>Classic Sourdough Loaf</span>
+      <span>$10</span>
+    </div>
+
+    <div class="price-row">
+      <span>Premium Inclusion Sourdough Loaf</span>
+      <span>$13</span>
+    </div>
+
+    <div class="price-row">
+      <span>Cookies</span>
+      <span>$3 each · $8 per 3-pack</span>
+    </div>
+
+    <div class="price-row">
+      <span>Muffins</span>
+      <span>$7.50 per 2-pack · $14 per 4-pack</span>
+    </div>
+
+    <div class="price-row">
+      <span>Cinnamon Rolls</span>
+      <span>$5 each · $18 per 4-pack</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ORDERING -->
+<section id="order">
+  <h2>Place a Preorder</h2>
+
+  <div class="card">
+
+    <p class="order-intro">
+      Preorders close each Tuesday and are available for pickup
+      Friday at the bake stand between 8:00 AM and 4:00 PM.
+      Please use the form below to request your items.
+    </p>
+
+    <div class="order-notice">
+      <p>
+        <strong>Your order is not final until it has been confirmed.</strong>
+      </p>
+
+      <p>
+        I will review your request and contact you to confirm item
+        availability before requesting payment.
+      </p>
+
+      <p>
+        Payment must be completed before Friday pickup.
+      </p>
+    </div>
+
+    <form
+      action="https://formspree.io/f/xbdwykyq"
+      method="POST"
+    >
+
+      <div class="quantity-grid">
+
+        <div class="form-group">
+          <label class="main-label" for="customer-name">
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="customer-name"
+            name="Customer Name"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="main-label" for="customer-phone">
+            Phone Number
+          </label>
+
+          <input
+            type="tel"
+            id="customer-phone"
+            name="Phone Number"
+            autocomplete="tel"
+            required
+          >
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label class="main-label" for="customer-email">
+          Email Address
+        </label>
+
+        <input
+          type="email"
+          id="customer-email"
+          name="Email Address"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="form-section">
+        <h3>Select Your Items</h3>
+
+        <p>
+          Select everything you would like to order. Add quantities
+          and package sizes in the order-details box below.
+        </p>
+
+        <div class="order-items">
+
+          <label class="order-option">
+            <input
+              type="checkbox"
+              name="Items Requested"
+              value="Classic Sourdough"
+            >
+            <span>Classic Sourdough</span>
+          </label>
+
+          <label class="order-option">
+            <input
+              type="checkbox"
+              name="Items Requested"
+              value="Roasted Garlic and Chive Sourdough"
+            >
+            <span>Roasted Garlic &amp; Chive Sourdough</span>
+          </label>
+
+          <label class="order-option">
+            <input
+              type="checkbox"
+              name="Items Requested"
+              value="Garden Harvest Sourdough"
+            >
+            <span>Garden Harvest Sourdough</span>
+          </label>
+
+          <label class="order-option">
+            <input
+              type="checkbox"
+              name="Items Requested"
+              value="Cheddar and Fire-Roasted Chili Sourdough"
+            >
+            <span>Cheddar &amp; Fire-Roasted Chili Sourdough</span>
+          </label>
+
+          <label class="order-option">
+            <input
+              type="checkbox"
+              name="Items Requested"
+              value="Brown Butter Salted Chocolate Chip Cookies"
+            >
+            <span>
+              Brown Butter Salted Chocolate Chip Cookies
+            </span>
+          </label>
+
+          <label class="order-option">
+            <input
+              type="checkbox"
+              name="Items Requested"
+              value="Oatmeal Craisin White Chocolate Cookies"
+            >
+            <span>
+              Oatmeal Craisin White Chocolate Cookies
+            </span>
+          </label>
+
+          <label class="order-option">
+            <input
+              type="checkbox"
+              name="Items Requested"
+              value="Strawberry Shortcake Cookies"
+            >
+            <span>Strawberry Shortcake Cookies</span>
+          </label>
+
+          <label class="order-option">
+            <input
+              type="checkbox"
+              name="Items Requested"
+              value="Blueberry Lemon Streusel Muffins"
+            >
+            <span>Blueberry Lemon Streusel Muffins</span>
+          </label>
+
+          <label class="order-option">
+            <input
+              type="checkbox"
+              name="Items Requested"
+              value="Blackberry Vanilla Bean Muffins"
+            >
+            <span>Blackberry Vanilla Bean Muffins</span>
+          </label>
+
+          <label class="order-option">
+            <input
+              type="checkbox"
+              name="Items Requested"
+              value="Cinnamon Rolls"
+            >
+            <span>Cinnamon Rolls</span>
+          </label>
+
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-top: 25px;">
+        <label class="main-label" for="order-details">
+          Quantities and Order Details
+        </label>
+
+        <textarea
+          id="order-details"
+          name="Quantities and Order Details"
+          placeholder="Example: 1 classic loaf, one 3-pack of chocolate chip cookies, and one 4-pack of cinnamon rolls."
+          required
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="main-label" for="pickup-time">
+          Preferred Friday Pickup Time
+        </label>
+
+        <select
+          id="pickup-time"
+          name="Preferred Pickup Time"
+          required
+        >
+          <option value="">Choose a pickup window</option>
+          <option value="8:00 AM–10:00 AM">8:00 AM–10:00 AM</option>
+          <option value="10:00 AM–12:00 PM">10:00 AM–12:00 PM</option>
+          <option value="12:00 PM–2:00 PM">12:00 PM–2:00 PM</option>
+          <option value="2:00 PM–4:00 PM">2:00 PM–4:00 PM</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="main-label" for="additional-notes">
+          Additional Notes
+        </label>
+
+        <textarea
+          id="additional-notes"
+          name="Additional Notes"
+          placeholder="Please include any questions or special requests here."
+        ></textarea>
+      </div>
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Little Bread Rising Hood Preorder Request"
+      >
+
+      <button type="submit">
+        Submit Preorder Request
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="fade">
+  <h2>🌿 About</h2>
+
+  <div class="card about-text">
+
+    <p>
+      Little Bread Rising Hood was born from a simple idea:
+      slow down, bake with intention, and share something real.
+    </p>
+
+    <p>
+      I’m a home baker based in Milwaukie, Oregon, creating
+      small-batch sourdough and baked goods using traditional
+      methods and quality ingredients. What started as a personal
+      passion quickly grew into something more—a way to connect
+      with my community through food that’s made by hand, not
+      by machines.
+    </p>
+
+    <p>
+      Every loaf is naturally leavened, long-fermented, and baked
+      with care. I believe good bread shouldn’t be rushed, and
+      you can taste the difference.
+    </p>
+
+    <p>
+      This bakery is also part of a bigger dream: building a more
+      intentional life centered around family, sustainability,
+      and eventually a homestead of my own. Little Bread Rising
+      Hood is the first step in that journey.
+    </p>
+
+    <p>
+      Thank you for supporting small, local, and handmade—it
+      truly matters.
+    </p>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
 <section>
   <h2>📸 Gallery</h2>
 
   <div class="gallery">
-    <img src="gallery1.jpg" alt="Sourdough loaf">
-    <img src="gallery2.png" alt="Sourdough inclusion loaf">
-    <img src="gallery3.png" alt="Cookies">
-    <img src="gallery4.jpg" alt="Muffins">
-    <img src="gallery6.jpg" alt="Muffins">
-    <img src="gallery5.jpg" alt="Sourdough">
+
+    <img
+      src="gallery1.jpg"
+      alt="Fresh artisan sourdough loaf"
+      loading="lazy"
+    >
+
+    <img
+      src="gallery2.png"
+      alt="Artisan inclusion sourdough loaf"
+      loading="lazy"
+    >
+
+    <img
+      src="gallery3.png"
+      alt="Freshly baked cookies"
+      loading="lazy"
+    >
+
+    <img
+      src="gallery4.jpg"
+      alt="Small-batch muffins"
+      loading="lazy"
+    >
+
+    <img
+      src="gallery6.jpg"
+      alt="Freshly baked muffins"
+      loading="lazy"
+    >
+
+    <img
+      src="gallery5.jpg"
+      alt="Handcrafted sourdough bread"
+      loading="lazy"
+    >
+
   </div>
 </section>
-  
 
-  <a href="https://www.instagram.com/little.bread.rising.hood" target="_blank">
-    Instagram
-  </a>
+<!-- FOOTER AND SOCIAL LINKS -->
+<footer>
+  <h2>Stay Connected</h2>
 
-  <a href="https://www.facebook.com/littlebreadrisinghood" target="_blank">
-    Facebook
-  </a>
+  <p class="footer-text">
+    Follow along for weekly menus, bake stand updates, and
+    fresh-from-the-oven photos.
+  </p>
 
-  <a href="https://venmo.com/u/littlebreadrisinghood" target="_blank">
-    Venmo
-  </a>
-</div>
+  <div class="social">
 
-<p style="text-align:center; margin-top:15px; opacity:0.75; font-size:0.9em;">
-</p>
-  
-</div>
+    <a
+      href="https://www.instagram.com/little.bread.rising.hood/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Instagram
+    </a>
 
-</section>
+    <a
+      href="https://www.facebook.com/littlebreadrisinghood"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Facebook
+    </a>
+
+    <a
+      href="https://venmo.com/u/littlebreadrisinghood"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Venmo
+    </a>
+
+  </div>
+
+  <p class="copyright">
+    © 2026 Little Bread Rising Hood · Milwaukie, Oregon
+  </p>
+</footer>
 
 <script>
+const aboutSection = document.getElementById("about");
 
+function showAboutSection() {
+  const position = aboutSection.getBoundingClientRect().top;
 
-/* FADE IN */
-const about = document.getElementById("about");
-window.addEventListener("scroll", () => {
-  const pos = about.getBoundingClientRect().top;
-  if (pos < window.innerHeight - 100) {
-    about.classList.add("show");
+  if (position < window.innerHeight - 100) {
+    aboutSection.classList.add("show");
   }
-});
+}
+
+window.addEventListener("scroll", showAboutSection);
+window.addEventListener("load", showAboutSection);
 </script>
-  
+
 </body>
 </html>
