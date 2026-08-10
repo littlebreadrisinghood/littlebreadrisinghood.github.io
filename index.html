@@ -825,127 +825,141 @@ footer h2 {
 </div>
       
       <div class="form-section">
-        <h3>Select Your Items</h3>
+  <h3>Select Your Items</h3>
 
-        <p>
-          Select everything you would like to order. Add quantities
-          and package sizes in the order-details box below.
-        </p>
-
-       <div class="order-items">
-
-  <!-- FRIDAY ITEMS -->
-
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Friday - Classic Sourdough"
-    >
-    <span>Friday — Classic Sourdough</span>
-  </label>
-
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Friday - Cheddar Onion Garlic Sourdough"
-    >
-    <span>Friday — Cheddar Onion Garlic Sourdough</span>
-  </label>
-
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Friday - Garden Harvest Sourdough"
-    >
-    <span>Friday — Garden Harvest Sourdough</span>
-  </label>
-
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Friday - Blueberry Crumble Muffins"
-    >
-    <span>Friday — Blueberry Crumble Muffins</span>
-  </label>
-
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Friday - Brown Butter Chocolate Chip Cookies"
-    >
-    <span>Friday — Brown Butter Chocolate Chip Cookies</span>
-  </label>
-
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Friday - Cinnamon Rolls"
-    >
-    <span>Friday — Cinnamon Rolls</span>
-  </label>
+  <p id="item-instructions">
+    Choose your pickup day above to see the available menu.
+  </p>
 
 
-  <!-- SATURDAY ITEMS -->
+  <!-- FRIDAY PREORDER ITEMS -->
+  <div id="friday-items" class="day-order-group" hidden>
 
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Saturday - Classic Sourdough"
-    >
-    <span>Saturday — Classic Sourdough</span>
-  </label>
+    <h3>Friday Menu</h3>
 
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Saturday - Jalapeno Cheddar Sourdough"
-    >
-    <span>Saturday — Jalapeño Cheddar Sourdough</span>
-  </label>
+    <div class="order-items">
 
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Saturday - Roasted Garlic and Chive Sourdough"
-    >
-    <span>Saturday — Roasted Garlic &amp; Chive Sourdough</span>
-  </label>
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Friday - Classic Sourdough"
+        >
+        <span>Classic Sourdough</span>
+      </label>
 
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Saturday - Blackberry Vanilla Bean Muffins"
-    >
-    <span>Saturday — Blackberry Vanilla Bean Muffins</span>
-  </label>
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Friday - Cheddar Onion Garlic Sourdough"
+        >
+        <span>Cheddar Onion Garlic Sourdough</span>
+      </label>
 
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Saturday - Oatmeal Cream Pies"
-    >
-    <span>Saturday — Oatmeal Cream Pies</span>
-  </label>
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Friday - Garden Harvest Sourdough"
+        >
+        <span>Garden Harvest Sourdough</span>
+      </label>
 
-  <label class="order-option">
-    <input
-      type="checkbox"
-      name="Items Requested"
-      value="Saturday - Banana Bread"
-    >
-    <span>Saturday — Banana Bread</span>
-  </label>
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Friday - Blueberry Crumble Muffins"
+        >
+        <span>Blueberry Crumble Muffins</span>
+      </label>
+
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Friday - Brown Butter Chocolate Chip Cookies"
+        >
+        <span>Brown Butter Chocolate Chip Cookies</span>
+      </label>
+
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Friday - Cinnamon Rolls"
+        >
+        <span>Cinnamon Rolls</span>
+      </label>
+
+    </div>
+  </div>
+
+
+  <!-- SATURDAY PREORDER ITEMS -->
+  <div id="saturday-items" class="day-order-group" hidden>
+
+    <h3>Saturday Menu</h3>
+
+    <div class="order-items">
+
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Saturday - Classic Sourdough"
+        >
+        <span>Classic Sourdough</span>
+      </label>
+
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Saturday - Jalapeno Cheddar Sourdough"
+        >
+        <span>Jalapeño Cheddar Sourdough</span>
+      </label>
+
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Saturday - Roasted Garlic and Chive Sourdough"
+        >
+        <span>Roasted Garlic &amp; Chive Sourdough</span>
+      </label>
+
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Saturday - Blackberry Vanilla Bean Muffins"
+        >
+        <span>Blackberry Vanilla Bean Muffins</span>
+      </label>
+
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Saturday - Oatmeal Cream Pies"
+        >
+        <span>Oatmeal Cream Pies — $5 each · $9 per 2-pack</span>
+      </label>
+
+      <label class="order-option">
+        <input
+          type="checkbox"
+          name="Items Requested"
+          value="Saturday - Banana Bread"
+        >
+        <span>Banana Bread — $4 per slice</span>
+      </label>
+
+    </div>
+  </div>
 
 </div>
 
@@ -964,7 +978,7 @@ footer h2 {
 
       <div class="form-group">
         <label class="main-label" for="pickup-time">
-          Preferred Friday Pickup Time
+          Preferred Pickup Time
         </label>
 
         <select
@@ -1135,6 +1149,7 @@ footer h2 {
 </footer>
 
 <script>
+/* ABOUT SECTION FADE */
 const aboutSection = document.getElementById("about");
 
 function showAboutSection() {
@@ -1147,6 +1162,60 @@ function showAboutSection() {
 
 window.addEventListener("scroll", showAboutSection);
 window.addEventListener("load", showAboutSection);
+
+
+/* FRIDAY / SATURDAY PREORDER MENU */
+const pickupDay = document.getElementById("pickup-day");
+const fridayItems = document.getElementById("friday-items");
+const saturdayItems = document.getElementById("saturday-items");
+const itemInstructions = document.getElementById("item-instructions");
+
+function clearCheckboxes(section) {
+  const checkboxes = section.querySelectorAll('input[type="checkbox"]');
+
+  checkboxes.forEach(function(checkbox) {
+    checkbox.checked = false;
+  });
+}
+
+function updatePreorderMenu() {
+
+  if (pickupDay.value === "Friday") {
+
+    fridayItems.hidden = false;
+    saturdayItems.hidden = true;
+
+    clearCheckboxes(saturdayItems);
+
+    itemInstructions.textContent =
+      "Select the Friday items you would like to preorder. Add quantities and package sizes below.";
+
+  } else if (pickupDay.value === "Saturday") {
+
+    fridayItems.hidden = true;
+    saturdayItems.hidden = false;
+
+    clearCheckboxes(fridayItems);
+
+    itemInstructions.textContent =
+      "Select the Saturday items you would like to preorder. Add quantities and package sizes below.";
+
+  } else {
+
+    fridayItems.hidden = true;
+    saturdayItems.hidden = true;
+
+    clearCheckboxes(fridayItems);
+    clearCheckboxes(saturdayItems);
+
+    itemInstructions.textContent =
+      "Choose your pickup day above to see the available menu.";
+  }
+}
+
+pickupDay.addEventListener("change", updatePreorderMenu);
+
+updatePreorderMenu();
 </script>
 
 </body>
