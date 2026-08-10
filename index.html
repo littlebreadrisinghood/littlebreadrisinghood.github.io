@@ -219,6 +219,37 @@ a {
   line-height: 1.5;
 }
 
+/* DAY MENUS */
+.day-menu {
+  margin-bottom: 35px;
+}
+
+.day-menu:last-child {
+  margin-bottom: 0;
+}
+
+.day-heading {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-radius: 14px;
+  background: var(--tan);
+  color: var(--dark-sage);
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+}
+
+.possible-addition {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: var(--tan);
+  color: var(--terracotta);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+  
 /* PRICES */
 .price-list {
   max-width: 700px;
@@ -543,7 +574,7 @@ footer h2 {
     <strong>Neighborhood Bake Stand</strong>
 
     <p>
-      Open Fridays from 7:00 AM–6:00 PM
+      Open Fridays &amp; Saturdays from 7:00 AM–6:00 PM
     </p>
 
     <p>
@@ -551,49 +582,108 @@ footer h2 {
     </p>
 
     <p>
-      Preorders close Tuesdays and may be picked up Fridays
-      at the bake stand between 8:00 AM–4:00 PM.
+      Fresh sourdough bread and small-batch bakes with a different
+      menu each day!
+    </p>
+
+    <p>
+      Preorders close Tuesdays and may be picked up Friday or Saturday
+      at the bake stand.
     </p>
   </div>
 </div>
 
 <!-- CURRENT MENU -->
 <section>
-  <h2>Current Menu</h2>
+  <h2>This Week's Bake Stand Menu</h2>
 
-  <div class="menu-grid">
+  <!-- FRIDAY MENU -->
+  <div class="day-menu">
 
-    <div class="menu-category">
-      <h3>Sourdough Bread</h3>
-
-      <p>Classic </p>
-      <p>Roasted Garlic &amp; Chive </p>
-      <p>Cheddar Onion Garlic </p>
-      <p>Italian Herb & Cheese </p>
-      <p> Jalapeno Cheddar </p>
+    <div class="day-heading">
+      Friday Menu
     </div>
 
-    <div class="menu-category">
-      <h3>Cookies</h3>
+    <div class="menu-grid">
 
-      <p>Brown Butter Salted Chocolate Chip </p>
-      <p>Oatmeal Craisin White Chocolate </p>
+      <div class="menu-category">
+        <h3>Sourdough Bread</h3>
+
+        <p>Classic</p>
+        <p>Cheddar Onion Garlic</p>
+        <p>Garden Harvest</p>
+      </div>
+
+      <div class="menu-category">
+        <h3>Muffins</h3>
+
+        <p>Blueberry Crumble</p>
+      </div>
+
+      <div class="menu-category">
+        <h3>Cookies</h3>
+
+        <p>Brown Butter Chocolate Chip</p>
+      </div>
+
+      <div class="menu-category">
+        <h3>Extras</h3>
+
+        <p>Cinnamon Rolls</p>
+      </div>
+
     </div>
-
-    <div class="menu-category">
-      <h3>Muffins</h3>
-
-      <p>Blueberry Lemon Streusel </p>
-      <p>Blackberry Vanilla Bean </p>
-    </div>
-
-    <div class="menu-category">
-      <h3>Sweet Bakes</h3>
-
-      <p>Cinnamon Rolls</p>
-    </div>
-
   </div>
+
+
+  <!-- SATURDAY MENU -->
+  <div class="day-menu">
+
+    <div class="day-heading">
+      Saturday Menu
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-category">
+        <h3>Sourdough Bread</h3>
+
+        <p>Classic</p>
+        <p>Jalapeño Cheddar</p>
+        <p>Roasted Garlic &amp; Chive</p>
+      </div>
+
+      <div class="menu-category">
+        <h3>Muffins</h3>
+
+        <p>Blackberry Vanilla Bean</p>
+      </div>
+
+      <div class="menu-category">
+        <h3>Cookies</h3>
+
+        <p>
+          Oatmeal Cream Pies
+          <span class="possible-addition">Possible New Addition</span>
+        </p>
+
+        <p>$5 each · $9 per 2-pack</p>
+      </div>
+
+      <div class="menu-category">
+        <h3>Extras</h3>
+
+        <p>
+          Banana Bread
+          <span class="possible-addition">Possible New Addition</span>
+        </p>
+
+        <p>$4 per slice</p>
+      </div>
+
+    </div>
+  </div>
+
 </section>
 
 <!-- PRICES -->
@@ -627,6 +717,16 @@ footer h2 {
       <span>$5 each · $18 per 4-pack</span>
     </div>
 
+    <div class="price-row">
+  <span>Oatmeal Cream Pies</span>
+  <span>$5 each · $9 per 2-pack</span>
+</div>
+
+<div class="price-row">
+  <span>Banana Bread</span>
+  <span>$4 per slice</span>
+</div>
+    
   </div>
 </section>
 
@@ -636,11 +736,11 @@ footer h2 {
 
   <div class="card">
 
-    <p class="order-intro">
-      Preorders close each Tuesday and are available for pickup
-      Friday at the bake stand between 8:00 AM and 4:00 PM.
-      Please use the form below to request your items.
-    </p>
+   <p class="order-intro">
+  Preorders close each Tuesday and are available for pickup
+  Friday or Saturday at the bake stand.
+  Please select your pickup day and use the form below to request your items.
+</p>
 
     <div class="order-notice">
       <p>
@@ -653,8 +753,8 @@ footer h2 {
       </p>
 
       <p>
-        Payment must be completed before Friday pickup.
-      </p>
+  Payment must be completed before your scheduled pickup day.
+</p>
     </div>
 
     <form
@@ -708,6 +808,22 @@ footer h2 {
         >
       </div>
 
+      <div class="form-group">
+  <label class="main-label" for="pickup-day">
+    Pickup Day
+  </label>
+
+  <select
+    id="pickup-day"
+    name="Pickup Day"
+    required
+  >
+    <option value="">Choose a pickup day</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+  </select>
+</div>
+      
       <div class="form-section">
         <h3>Select Your Items</h3>
 
@@ -716,104 +832,122 @@ footer h2 {
           and package sizes in the order-details box below.
         </p>
 
-        <div class="order-items">
+       <div class="order-items">
 
-          <label class="order-option">
-            <input
-              type="checkbox"
-              name="Items Requested"
-              value="Classic Sourdough"
-            >
-            <span>Classic Sourdough</span>
-          </label>
+  <!-- FRIDAY ITEMS -->
 
-          <label class="order-option">
-            <input
-              type="checkbox"
-              name="Items Requested"
-              value="Roasted Garlic and Chive Sourdough"
-            >
-            <span>Roasted Garlic &amp; Chive Sourdough</span>
-          </label>
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Friday - Classic Sourdough"
+    >
+    <span>Friday — Classic Sourdough</span>
+  </label>
 
-          <label class="order-option">
-            <input
-              type="checkbox"
-              name="Items Requested"
-              value="Jalapeno Cheddar Sourdough"
-            >
-            <span>Jalapeno Cheddar Sourdough</span>
-          </label>
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Friday - Cheddar Onion Garlic Sourdough"
+    >
+    <span>Friday — Cheddar Onion Garlic Sourdough</span>
+  </label>
 
-          <label class="order-option">
-            <input
-              type="checkbox"
-              name="Items Requested"
-              value="Italian Herb & Cheese Sourdough"
-            >
-            <span>Italian Herb &amp; Cheese Sourdough</span>
-          </label>
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Friday - Garden Harvest Sourdough"
+    >
+    <span>Friday — Garden Harvest Sourdough</span>
+  </label>
 
-          <label class="order-option">
-            <input
-              type="checkbox"
-              name="Items Requested"
-              value="Cheddar Onion Garlic Sourdough"
-            >
-            <span>Cheddar Onion Garlic Sourdough</span>
-          </label>
-          
-          <label class="order-option">
-            <input
-              type="checkbox"
-              name="Items Requested"
-              value="Brown Butter Salted Chocolate Chip Cookies"
-            >
-            <span>
-              Brown Butter Salted Chocolate Chip Cookies
-            </span>
-          </label>
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Friday - Blueberry Crumble Muffins"
+    >
+    <span>Friday — Blueberry Crumble Muffins</span>
+  </label>
 
-          <label class="order-option">
-            <input
-              type="checkbox"
-              name="Items Requested"
-              value="Oatmeal Craisin White Chocolate Cookies"
-            >
-            <span>
-              Oatmeal Craisin White Chocolate Cookies
-            </span>
-          </label>
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Friday - Brown Butter Chocolate Chip Cookies"
+    >
+    <span>Friday — Brown Butter Chocolate Chip Cookies</span>
+  </label>
 
-          <label class="order-option">
-            <input
-              type="checkbox"
-              name="Items Requested"
-              value="Blueberry Lemon Streusel Muffins"
-            >
-            <span>Blueberry Lemon Streusel Muffins</span>
-          </label>
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Friday - Cinnamon Rolls"
+    >
+    <span>Friday — Cinnamon Rolls</span>
+  </label>
 
-          <label class="order-option">
-            <input
-              type="checkbox"
-              name="Items Requested"
-              value="Blackberry Vanilla Bean Muffins"
-            >
-            <span>Blackberry Vanilla Bean Muffins</span>
-          </label>
 
-          <label class="order-option">
-            <input
-              type="checkbox"
-              name="Items Requested"
-              value="Cinnamon Rolls"
-            >
-            <span>Cinnamon Rolls</span>
-          </label>
+  <!-- SATURDAY ITEMS -->
 
-        </div>
-      </div>
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Saturday - Classic Sourdough"
+    >
+    <span>Saturday — Classic Sourdough</span>
+  </label>
+
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Saturday - Jalapeno Cheddar Sourdough"
+    >
+    <span>Saturday — Jalapeño Cheddar Sourdough</span>
+  </label>
+
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Saturday - Roasted Garlic and Chive Sourdough"
+    >
+    <span>Saturday — Roasted Garlic &amp; Chive Sourdough</span>
+  </label>
+
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Saturday - Blackberry Vanilla Bean Muffins"
+    >
+    <span>Saturday — Blackberry Vanilla Bean Muffins</span>
+  </label>
+
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Saturday - Oatmeal Cream Pies"
+    >
+    <span>Saturday — Oatmeal Cream Pies</span>
+  </label>
+
+  <label class="order-option">
+    <input
+      type="checkbox"
+      name="Items Requested"
+      value="Saturday - Banana Bread"
+    >
+    <span>Saturday — Banana Bread</span>
+  </label>
+
+</div>
 
       <div class="form-group" style="margin-top: 25px;">
         <label class="main-label" for="order-details">
