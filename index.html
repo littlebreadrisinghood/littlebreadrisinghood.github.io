@@ -1,24 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
-<meta
-  name="description"
-  content="Little Bread Rising Hood offers artisan sourdough bread and small-batch baked goods in Milwaukie, Oregon."
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Little Bread Rising Hood offers artisan sourdough bread and small-batch baked goods in Milwaukie, Oregon.">
 
 <title>Little Bread Rising Hood</title>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@300;400;500;600&display=swap"
-  rel="stylesheet"
->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -44,7 +34,11 @@ html {
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(to bottom, var(--cream), var(--warm-cream));
+  background: linear-gradient(
+    to bottom,
+    var(--cream),
+    var(--warm-cream)
+  );
   color: var(--dark-sage);
   overflow-x: hidden;
 }
@@ -55,9 +49,7 @@ section {
   padding: 55px 20px;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
 
@@ -77,7 +69,7 @@ a {
   color: inherit;
 }
 
-/* FLOATING BUBBLES */
+/* FLOATING BACKGROUND BUBBLES */
 .bubble {
   position: fixed;
   z-index: -1;
@@ -104,7 +96,7 @@ a {
   }
 }
 
-/* HERO */
+/* HERO HEADER */
 .hero {
   padding: 70px 20px;
   background: linear-gradient(
@@ -156,7 +148,7 @@ a {
   opacity: 0.88;
 }
 
-/* ANNOUNCEMENT */
+/* BAKE STAND INFORMATION */
 .stand-info {
   max-width: 900px;
   margin: 35px auto 0;
@@ -193,7 +185,7 @@ a {
   box-shadow: 0 12px 28px rgba(63, 70, 53, 0.08);
 }
 
-/* MENU */
+/* MENU GRID */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -219,13 +211,9 @@ a {
   line-height: 1.5;
 }
 
-/* DAY MENUS */
+/* DAY MENU */
 .day-menu {
   margin-bottom: 35px;
-}
-
-.day-menu:last-child {
-  margin-bottom: 0;
 }
 
 .day-heading {
@@ -237,17 +225,6 @@ a {
   text-align: center;
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
-}
-
-.possible-addition {
-  display: inline-block;
-  margin-left: 6px;
-  padding: 3px 8px;
-  border-radius: 20px;
-  background: var(--tan);
-  color: var(--terracotta);
-  font-size: 0.75rem;
-  font-weight: 600;
 }
 
 /* PRICES */
@@ -571,10 +548,12 @@ footer h2 {
 <!-- BAKE STAND INFORMATION -->
 <div class="stand-info">
   <div class="stand-card">
+
     <strong>Neighborhood Bake Stand</strong>
 
     <p>
-      Open Fridays &amp; Saturdays from 7 AM – 6 PM or until sold out
+      Open Friday, October 30 from 7 AM – 6 PM
+      or until sold out
     </p>
 
     <p>
@@ -582,22 +561,35 @@ footer h2 {
     </p>
 
     <p>
-      Fresh sourdough bread and small-batch bakes with a rotating
-      menu!
+      Fresh sourdough bread and small-batch bakes
+      with a rotating menu!
     </p>
 
     <p>
-      Preorders close Wednesdays at 8 PM and may be picked up Friday or Saturday
-      at the bake stand.
+      Preorders close Wednesday, October 28 at 8 PM.
+      Friday pickup only this week.
     </p>
+
+    <p>
+      <strong>
+        Closed Saturday, October 31 —
+        no Saturday menu this week.
+      </strong>
+    </p>
+
   </div>
 </div>
 
 <!-- CURRENT MENU -->
 <section>
-  <h2>This Week's Bake Stand Menu for 10/2 &amp; 10/3</h2>
+  <h2>
+    This Week's Bake Stand Menu — Friday, October 30
+  </h2>
 
-  <!-- FRIDAY MENU -->
+  <p style="text-align:center; margin-top:-10px; margin-bottom:25px;">
+    Friday only this week! No Saturday menu on October 31.
+  </p>
+
   <div class="day-menu">
 
     <div class="day-heading">
@@ -606,74 +598,41 @@ footer h2 {
 
     <div class="menu-grid">
 
+      <!-- BREAD -->
       <div class="menu-category">
         <h3>Sourdough Bread</h3>
 
         <p>Classic</p>
-        <p>Cheddar Onion Garlic</p>
-        <p>Lemon Blueberry White Chocolate</p>
+        <p>Jalapeño Cheddar</p>
+        <p>Everything Cheddar</p>
+        <p>Smoked Gouda and Onion</p>
       </div>
 
+      <!-- MUFFINS -->
       <div class="menu-category">
         <h3>Muffins</h3>
 
         <p>Pumpkin Coffee Cake</p>
       </div>
 
+      <!-- COOKIES -->
       <div class="menu-category">
         <h3>Cookies</h3>
 
         <p>Brown Butter Salted Chocolate Chip</p>
-        <p>Pumpkin White Chocolate</p>
+        <p>Pumpkin Spice Snickerdoodle</p>
       </div>
 
+      <!-- EXTRAS -->
       <div class="menu-category">
         <h3>Extras</h3>
 
         <p>Cinnamon Rolls</p>
+        <p>Sourdough Brownies</p>
       </div>
 
     </div>
   </div>
-
-  <!-- SATURDAY MENU -->
-  <div class="day-menu">
-
-    <div class="day-heading">
-      Saturday Menu
-    </div>
-
-    <div class="menu-grid">
-
-      <div class="menu-category">
-        <h3>Sourdough Bread</h3>
-
-        <p>Classic</p>
-        <p>Jalapeño Cheddar</p>
-        <p>Roasted Garlic &amp; Chive</p>
-      </div>
-
-      <div class="menu-category">
-        <h3>Muffins</h3>
-
-        <p>Mixed Berry Crumble</p>
-      </div>
-
-      <div class="menu-category">
-        <h3>Cookies</h3>
-
-        <p>Brown Butter Salted Chocolate Chip</p>
-      </div>
-
-      <div class="menu-category">
-        <h3>Extras</h3>
-
-        <p>Banana Bread</p>
-      </div>
-
-    </div>
-  </div>
-
 </section>
 
 <!-- PRICES -->
@@ -708,13 +667,8 @@ footer h2 {
     </div>
 
     <div class="price-row">
-      <span>Cream Pie Cookies</span>
-      <span>$4 each · $7 per 2-pack</span>
-    </div>
-
-    <div class="price-row">
-      <span>Banana Bread</span>
-      <span>$4 per Slice</span>
+      <span>Sourdough Brownies</span>
+      <span>$4 each</span>
     </div>
 
   </div>
@@ -727,24 +681,29 @@ footer h2 {
   <div class="card">
 
     <p class="order-intro">
-      Preorders close Wednesdays at 8 PM and are available for pickup
-      Friday or Saturday at the bake stand.
-      Please select your pickup day and use the form below to request your items.
+      Preorders close Wednesday, October 28 at 8 PM.
+      Pickup is Friday, October 30 only.
+      We are closed Saturday this week.
+      Use the form below to request your items.
     </p>
 
     <div class="order-notice">
+
       <p>
-        <strong>Your order is not final until it has been confirmed.</strong>
+        <strong>
+          Your order is not final until it has been confirmed.
+        </strong>
       </p>
 
       <p>
-        I will review your request and contact you to confirm item
-        availability before requesting payment.
+        I will review your request and contact you
+        to confirm item availability before requesting payment.
       </p>
 
       <p>
         Payment must be completed before your scheduled pickup day.
       </p>
+
     </div>
 
     <form
@@ -752,6 +711,7 @@ footer h2 {
       method="POST"
     >
 
+      <!-- CUSTOMER INFORMATION -->
       <div class="quantity-grid">
 
         <div class="form-group">
@@ -798,6 +758,7 @@ footer h2 {
         >
       </div>
 
+      <!-- PICKUP DAY -->
       <div class="form-group">
         <label class="main-label" for="pickup-day">
           Pickup Day
@@ -808,26 +769,29 @@ footer h2 {
           name="Pickup Day"
           required
         >
-          <option value="">Choose a pickup day</option>
-          <option value="Friday">Friday</option>
-          <option value="Saturday">Saturday</option>
+          <option value="Friday, October 30" selected>
+            Friday, October 30
+          </option>
         </select>
       </div>
 
+      <!-- PREORDER ITEMS -->
       <div class="form-section">
+
         <h3>Select Your Items</h3>
 
-        <p id="item-instructions">
-          Choose your pickup day above to see the available menu.
+        <p>
+          Select the Friday items you would like to preorder.
+          Add quantities and package sizes below.
         </p>
 
-        <!-- FRIDAY PREORDER ITEMS -->
-        <div id="friday-items" class="day-order-group" hidden>
+        <div id="friday-items" class="day-order-group">
 
-          <h3>Friday Menu</h3>
+          <h3>Friday, October 30 Menu</h3>
 
           <div class="order-items">
 
+            <!-- CLASSIC SOURDOUGH -->
             <label class="order-option">
               <input
                 type="checkbox"
@@ -837,24 +801,37 @@ footer h2 {
               <span>Classic Sourdough</span>
             </label>
 
+            <!-- JALAPENO CHEDDAR -->
             <label class="order-option">
               <input
                 type="checkbox"
                 name="Items Requested"
-                value="Friday - Cheddar Onion Garlic Sourdough"
+                value="Friday - Jalapeño Cheddar Sourdough"
               >
-              <span>Cheddar Onion Garlic Sourdough</span>
+              <span>Jalapeño Cheddar Sourdough</span>
             </label>
 
+            <!-- EVERYTHING CHEDDAR -->
             <label class="order-option">
               <input
                 type="checkbox"
                 name="Items Requested"
-                value="Friday - Lemon Blueberry White Chocolate Sourdough"
+                value="Friday - Everything Cheddar Sourdough"
               >
-              <span>Lemon Blueberry White Chocolate Sourdough</span>
+              <span>Everything Cheddar Sourdough</span>
             </label>
 
+            <!-- SMOKED GOUDA AND ONION -->
+            <label class="order-option">
+              <input
+                type="checkbox"
+                name="Items Requested"
+                value="Friday - Smoked Gouda and Onion Sourdough"
+              >
+              <span>Smoked Gouda and Onion Sourdough</span>
+            </label>
+
+            <!-- PUMPKIN COFFEE CAKE MUFFINS -->
             <label class="order-option">
               <input
                 type="checkbox"
@@ -864,24 +841,31 @@ footer h2 {
               <span>Pumpkin Coffee Cake Muffins</span>
             </label>
 
+            <!-- CHOCOLATE CHIP COOKIES -->
             <label class="order-option">
               <input
                 type="checkbox"
                 name="Items Requested"
-                value="Friday - Brown Butter Salted Chocolate Chip"
+                value="Friday - Brown Butter Salted Chocolate Chip Cookies"
               >
-              <span>Brown Butter Salted Chocolate Chip</span>
+              <span>
+                Brown Butter Salted Chocolate Chip Cookies
+              </span>
             </label>
 
+            <!-- PUMPKIN SPICE SNICKERDOODLES -->
             <label class="order-option">
               <input
                 type="checkbox"
                 name="Items Requested"
-                value="Friday - Pumpkin White Chocolate Cookies"
+                value="Friday - Pumpkin Spice Snickerdoodle Cookies"
               >
-              <span>Pumpkin White Chocolate Cookies</span>
+              <span>
+                Pumpkin Spice Snickerdoodle Cookies
+              </span>
             </label>
 
+            <!-- CINNAMON ROLLS -->
             <label class="order-option">
               <input
                 type="checkbox"
@@ -891,76 +875,23 @@ footer h2 {
               <span>Cinnamon Rolls</span>
             </label>
 
-          </div>
-        </div>
-
-        <!-- SATURDAY PREORDER ITEMS -->
-        <div id="saturday-items" class="day-order-group" hidden>
-
-          <h3>Saturday Menu</h3>
-
-          <div class="order-items">
-
+            <!-- SOURDOUGH BROWNIES -->
             <label class="order-option">
               <input
                 type="checkbox"
                 name="Items Requested"
-                value="Saturday - Classic Sourdough"
+                value="Friday - Sourdough Brownies"
               >
-              <span>Classic Sourdough</span>
-            </label>
-
-            <label class="order-option">
-              <input
-                type="checkbox"
-                name="Items Requested"
-                value="Saturday - Jalapeno Cheddar Sourdough"
-              >
-              <span>Jalapeño Cheddar Sourdough</span>
-            </label>
-
-            <label class="order-option">
-              <input
-                type="checkbox"
-                name="Items Requested"
-                value="Saturday - Roasted Garlic & Chive Sourdough"
-              >
-              <span>Roasted Garlic &amp; Chive Sourdough</span>
-            </label>
-
-            <label class="order-option">
-              <input
-                type="checkbox"
-                name="Items Requested"
-                value="Saturday - Mixed Berry Crumble Muffins"
-              >
-              <span>Mixed Berry Crumble Muffins</span>
-            </label>
-
-            <label class="order-option">
-              <input
-                type="checkbox"
-                name="Items Requested"
-                value="Saturday - Brown Butter Salted Chocolate Chip"
-              >
-              <span>Brown Butter Salted Chocolate Chip</span>
-            </label>
-
-            <label class="order-option">
-              <input
-                type="checkbox"
-                name="Items Requested"
-                value="Saturday - Banana Bread"
-              >
-              <span>Banana Bread</span>
+              <span>Sourdough Brownies</span>
             </label>
 
           </div>
         </div>
-
       </div>
 
+      <!-- QUANTITIES -->
       <div class="form-group" style="margin-top: 25px;">
+
         <label class="main-label" for="order-details">
           Quantities and Order Details
         </label>
@@ -968,12 +899,15 @@ footer h2 {
         <textarea
           id="order-details"
           name="Quantities and Order Details"
-          placeholder="Example: 1 classic loaf, one 3-pack of chocolate chip cookies, and one 4-pack of cinnamon rolls."
+          placeholder="Example: 1 classic loaf, 3 pumpkin spice snickerdoodles, and 4 sourdough brownies."
           required
         ></textarea>
+
       </div>
 
+      <!-- PICKUP TIME -->
       <div class="form-group">
+
         <label class="main-label" for="pickup-time">
           Preferred Pickup Time
         </label>
@@ -983,15 +917,31 @@ footer h2 {
           name="Preferred Pickup Time"
           required
         >
-          <option value="">Choose a pickup window</option>
-          <option value="8:00 AM–10:00 AM">8:00 AM–10:00 AM</option>
-          <option value="10:00 AM–12:00 PM">10:00 AM–12:00 PM</option>
-          <option value="12:00 PM–2:00 PM">12:00 PM–2:00 PM</option>
-          <option value="2:00 PM–4:00 PM">2:00 PM–4:00 PM</option>
+          <option value="">
+            Choose a pickup window
+          </option>
+
+          <option value="8:00 AM–10:00 AM">
+            8:00 AM–10:00 AM
+          </option>
+
+          <option value="10:00 AM–12:00 PM">
+            10:00 AM–12:00 PM
+          </option>
+
+          <option value="12:00 PM–2:00 PM">
+            12:00 PM–2:00 PM
+          </option>
+
+          <option value="2:00 PM–4:00 PM">
+            2:00 PM–4:00 PM
+          </option>
         </select>
       </div>
 
+      <!-- ADDITIONAL NOTES -->
       <div class="form-group">
+
         <label class="main-label" for="additional-notes">
           Additional Notes
         </label>
@@ -1001,6 +951,7 @@ footer h2 {
           name="Additional Notes"
           placeholder="Please include any questions or special requests here."
         ></textarea>
+
       </div>
 
       <input
@@ -1014,6 +965,7 @@ footer h2 {
       </button>
 
     </form>
+
   </div>
 </section>
 
@@ -1105,11 +1057,12 @@ footer h2 {
 
 <!-- FOOTER AND SOCIAL LINKS -->
 <footer>
+
   <h2>Stay Connected</h2>
 
   <p class="footer-text">
-    Follow along for weekly menus, bake stand updates, and
-    fresh-from-the-oven photos.
+    Follow along for weekly menus, bake stand updates,
+    and fresh-from-the-oven photos.
   </p>
 
   <div class="social">
@@ -1143,10 +1096,11 @@ footer h2 {
   <p class="copyright">
     © 2026 Little Bread Rising Hood · Milwaukie, Oregon
   </p>
+
 </footer>
 
 <script>
-/* ABOUT SECTION FADE */
+/* ABOUT SECTION FADE ANIMATION */
 const aboutSection = document.getElementById("about");
 
 function showAboutSection() {
@@ -1159,60 +1113,6 @@ function showAboutSection() {
 
 window.addEventListener("scroll", showAboutSection);
 window.addEventListener("load", showAboutSection);
-
-
-/* FRIDAY / SATURDAY PREORDER MENU */
-const pickupDay = document.getElementById("pickup-day");
-const fridayItems = document.getElementById("friday-items");
-const saturdayItems = document.getElementById("saturday-items");
-const itemInstructions = document.getElementById("item-instructions");
-
-function clearCheckboxes(section) {
-  const checkboxes = section.querySelectorAll('input[type="checkbox"]');
-
-  checkboxes.forEach(function(checkbox) {
-    checkbox.checked = false;
-  });
-}
-
-function updatePreorderMenu() {
-
-  if (pickupDay.value === "Friday") {
-
-    fridayItems.hidden = false;
-    saturdayItems.hidden = true;
-
-    clearCheckboxes(saturdayItems);
-
-    itemInstructions.textContent =
-      "Select the Friday items you would like to preorder. Add quantities and package sizes below.";
-
-  } else if (pickupDay.value === "Saturday") {
-
-    fridayItems.hidden = true;
-    saturdayItems.hidden = false;
-
-    clearCheckboxes(fridayItems);
-
-    itemInstructions.textContent =
-      "Select the Saturday items you would like to preorder. Add quantities and package sizes below.";
-
-  } else {
-
-    fridayItems.hidden = true;
-    saturdayItems.hidden = true;
-
-    clearCheckboxes(fridayItems);
-    clearCheckboxes(saturdayItems);
-
-    itemInstructions.textContent =
-      "Choose your pickup day above to see the available menu.";
-  }
-}
-
-pickupDay.addEventListener("change", updatePreorderMenu);
-
-updatePreorderMenu();
 </script>
 
 </body>
