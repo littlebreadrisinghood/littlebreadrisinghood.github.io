@@ -211,9 +211,13 @@ a {
   line-height: 1.5;
 }
 
-/* DAY MENU */
+/* DAY MENUS */
 .day-menu {
   margin-bottom: 35px;
+}
+
+.day-menu:last-child {
+  margin-bottom: 0;
 }
 
 .day-heading {
@@ -507,16 +511,8 @@ footer h2 {
 
 <!-- FLOATING BACKGROUND BUBBLES -->
 <div class="bubble" style="left: 10%;"></div>
-
-<div
-  class="bubble"
-  style="left: 40%; animation-delay: 5s;"
-></div>
-
-<div
-  class="bubble"
-  style="left: 70%; animation-delay: 10s;"
-></div>
+<div class="bubble" style="left: 40%; animation-delay: 5s;"></div>
+<div class="bubble" style="left: 70%; animation-delay: 10s;"></div>
 
 <!-- HERO -->
 <header class="hero">
@@ -552,8 +548,8 @@ footer h2 {
     <strong>Neighborhood Bake Stand</strong>
 
     <p>
-      Open Friday, October 30 from 7 AM – 6 PM
-      or until sold out
+      Open Friday, November 6 and Saturday, November 7
+      from 7 AM – 6 PM or until sold out
     </p>
 
     <p>
@@ -562,19 +558,13 @@ footer h2 {
 
     <p>
       Fresh sourdough bread and small-batch bakes
-      with a rotating menu!
+      with a rotating weekly menu!
     </p>
 
     <p>
-      Preorders close Wednesday, October 28 at 8 PM.
-      Friday pickup only this week.
-    </p>
-
-    <p>
-      <strong>
-        Closed Saturday, October 31 —
-        no Saturday menu this week.
-      </strong>
+      Preorders close Wednesday, November 4 at 8 PM.
+      Pickup is available Friday or Saturday
+      at the bake stand.
     </p>
 
   </div>
@@ -583,39 +573,78 @@ footer h2 {
 <!-- CURRENT MENU -->
 <section>
   <h2>
-    This Week's Bake Stand Menu — Friday, October 30
+    This Week's Bake Stand Menu — November 6 &amp; 7
   </h2>
 
-  <p style="text-align:center; margin-top:-10px; margin-bottom:25px;">
-    Friday only this week! No Saturday menu on October 31.
-  </p>
-
+  <!-- FRIDAY MENU -->
   <div class="day-menu">
 
     <div class="day-heading">
-      Friday Menu
+      Friday, November 6
     </div>
 
     <div class="menu-grid">
 
-      <!-- BREAD -->
+      <!-- FRIDAY BREAD -->
+      <div class="menu-category">
+        <h3>Sourdough Bread</h3>
+
+        <p>Classic</p>
+        <p>Cheddar Onion Garlic</p>
+        <p>Smokey Southwest Pepper Jack</p>
+      </div>
+
+      <!-- FRIDAY MUFFINS -->
+      <div class="menu-category">
+        <h3>Muffins</h3>
+
+        <p>Banana Bread Muffins</p>
+      </div>
+
+      <!-- FRIDAY COOKIES -->
+      <div class="menu-category">
+        <h3>Cookies</h3>
+
+        <p>Double Chocolate Cream Pie</p>
+        <p>Brown Butter Salted Chocolate Chip</p>
+      </div>
+
+      <!-- FRIDAY EXTRAS -->
+      <div class="menu-category">
+        <h3>Extras</h3>
+
+        <p>Cinnamon Rolls</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SATURDAY MENU -->
+  <div class="day-menu">
+
+    <div class="day-heading">
+      Saturday, November 7
+    </div>
+
+    <div class="menu-grid">
+
+      <!-- SATURDAY BREAD -->
       <div class="menu-category">
         <h3>Sourdough Bread</h3>
 
         <p>Classic</p>
         <p>Jalapeño Cheddar</p>
-        <p>Everything Cheddar</p>
-        <p>Smoked Gouda and Onion</p>
+        <p>Garlic Herb Asiago</p>
       </div>
 
-      <!-- MUFFINS -->
+      <!-- SATURDAY MUFFINS -->
       <div class="menu-category">
         <h3>Muffins</h3>
 
         <p>Pumpkin Coffee Cake</p>
       </div>
 
-      <!-- COOKIES -->
+      <!-- SATURDAY COOKIES -->
       <div class="menu-category">
         <h3>Cookies</h3>
 
@@ -623,11 +652,10 @@ footer h2 {
         <p>Pumpkin Spice Snickerdoodle</p>
       </div>
 
-      <!-- EXTRAS -->
+      <!-- SATURDAY EXTRAS -->
       <div class="menu-category">
         <h3>Extras</h3>
 
-        <p>Cinnamon Rolls</p>
         <p>Sourdough Brownies</p>
       </div>
 
@@ -652,17 +680,22 @@ footer h2 {
     </div>
 
     <div class="price-row">
-      <span>Cookies</span>
-      <span>$3 each · $8 per 3-pack</span>
-    </div>
-
-    <div class="price-row">
       <span>Muffins</span>
       <span>$7 per 2-pack · $13 per 4-pack</span>
     </div>
 
     <div class="price-row">
-      <span>Cinnamon Rolls &amp; Sweet Rolls</span>
+      <span>Regular Cookies</span>
+      <span>$3 each · $8 per 3-pack</span>
+    </div>
+
+    <div class="price-row">
+      <span>Double Chocolate Cream Pies</span>
+      <span>$4 each · $7 per 2-pack</span>
+    </div>
+
+    <div class="price-row">
+      <span>Cinnamon Rolls</span>
       <span>$5 each · $18 per 4-pack</span>
     </div>
 
@@ -681,10 +714,11 @@ footer h2 {
   <div class="card">
 
     <p class="order-intro">
-      Preorders close Wednesday, October 28 at 8 PM.
-      Pickup is Friday, October 30 only.
-      We are closed Saturday this week.
-      Use the form below to request your items.
+      Preorders close Wednesday, November 4 at 8 PM.
+      Pickup is available Friday, November 6
+      or Saturday, November 7 at the bake stand.
+      Please select your pickup day and use
+      the form below to request your items.
     </p>
 
     <div class="order-notice">
@@ -769,8 +803,16 @@ footer h2 {
           name="Pickup Day"
           required
         >
-          <option value="Friday, October 30" selected>
-            Friday, October 30
+          <option value="">
+            Choose a pickup day
+          </option>
+
+          <option value="Friday, November 6">
+            Friday, November 6
+          </option>
+
+          <option value="Saturday, November 7">
+            Saturday, November 7
           </option>
         </select>
       </div>
@@ -780,14 +822,19 @@ footer h2 {
 
         <h3>Select Your Items</h3>
 
-        <p>
-          Select the Friday items you would like to preorder.
-          Add quantities and package sizes below.
+        <p id="item-instructions">
+          Choose your pickup day above to see
+          the available menu.
         </p>
 
-        <div id="friday-items" class="day-order-group">
+        <!-- FRIDAY PREORDER ITEMS -->
+        <div
+          id="friday-items"
+          class="day-order-group"
+          hidden
+        >
 
-          <h3>Friday, October 30 Menu</h3>
+          <h3>Friday, November 6 Menu</h3>
 
           <div class="order-items">
 
@@ -801,44 +848,44 @@ footer h2 {
               <span>Classic Sourdough</span>
             </label>
 
-            <!-- JALAPENO CHEDDAR -->
+            <!-- CHEDDAR ONION GARLIC -->
             <label class="order-option">
               <input
                 type="checkbox"
                 name="Items Requested"
-                value="Friday - Jalapeño Cheddar Sourdough"
+                value="Friday - Cheddar Onion Garlic Sourdough"
               >
-              <span>Jalapeño Cheddar Sourdough</span>
+              <span>Cheddar Onion Garlic Sourdough</span>
             </label>
 
-            <!-- EVERYTHING CHEDDAR -->
+            <!-- SMOKEY SOUTHWEST PEPPER JACK -->
             <label class="order-option">
               <input
                 type="checkbox"
                 name="Items Requested"
-                value="Friday - Everything Cheddar Sourdough"
+                value="Friday - Smokey Southwest Pepper Jack Sourdough"
               >
-              <span>Everything Cheddar Sourdough</span>
+              <span>Smokey Southwest Pepper Jack Sourdough</span>
             </label>
 
-            <!-- SMOKED GOUDA AND ONION -->
+            <!-- BANANA BREAD MUFFINS -->
             <label class="order-option">
               <input
                 type="checkbox"
                 name="Items Requested"
-                value="Friday - Smoked Gouda and Onion Sourdough"
+                value="Friday - Banana Bread Muffins"
               >
-              <span>Smoked Gouda and Onion Sourdough</span>
+              <span>Banana Bread Muffins</span>
             </label>
 
-            <!-- PUMPKIN COFFEE CAKE MUFFINS -->
+            <!-- DOUBLE CHOCOLATE CREAM PIES -->
             <label class="order-option">
               <input
                 type="checkbox"
                 name="Items Requested"
-                value="Friday - Pumpkin Coffee Cake Muffins"
+                value="Friday - Double Chocolate Cream Pies"
               >
-              <span>Pumpkin Coffee Cake Muffins</span>
+              <span>Double Chocolate Cream Pies</span>
             </label>
 
             <!-- CHOCOLATE CHIP COOKIES -->
@@ -853,18 +900,6 @@ footer h2 {
               </span>
             </label>
 
-            <!-- PUMPKIN SPICE SNICKERDOODLES -->
-            <label class="order-option">
-              <input
-                type="checkbox"
-                name="Items Requested"
-                value="Friday - Pumpkin Spice Snickerdoodle Cookies"
-              >
-              <span>
-                Pumpkin Spice Snickerdoodle Cookies
-              </span>
-            </label>
-
             <!-- CINNAMON ROLLS -->
             <label class="order-option">
               <input
@@ -875,18 +910,97 @@ footer h2 {
               <span>Cinnamon Rolls</span>
             </label>
 
+          </div>
+        </div>
+
+        <!-- SATURDAY PREORDER ITEMS -->
+        <div
+          id="saturday-items"
+          class="day-order-group"
+          hidden
+        >
+
+          <h3>Saturday, November 7 Menu</h3>
+
+          <div class="order-items">
+
+            <!-- CLASSIC SOURDOUGH -->
+            <label class="order-option">
+              <input
+                type="checkbox"
+                name="Items Requested"
+                value="Saturday - Classic Sourdough"
+              >
+              <span>Classic Sourdough</span>
+            </label>
+
+            <!-- JALAPENO CHEDDAR -->
+            <label class="order-option">
+              <input
+                type="checkbox"
+                name="Items Requested"
+                value="Saturday - Jalapeño Cheddar Sourdough"
+              >
+              <span>Jalapeño Cheddar Sourdough</span>
+            </label>
+
+            <!-- GARLIC HERB ASIAGO -->
+            <label class="order-option">
+              <input
+                type="checkbox"
+                name="Items Requested"
+                value="Saturday - Garlic Herb Asiago Sourdough"
+              >
+              <span>Garlic Herb Asiago Sourdough</span>
+            </label>
+
+            <!-- PUMPKIN COFFEE CAKE MUFFINS -->
+            <label class="order-option">
+              <input
+                type="checkbox"
+                name="Items Requested"
+                value="Saturday - Pumpkin Coffee Cake Muffins"
+              >
+              <span>Pumpkin Coffee Cake Muffins</span>
+            </label>
+
+            <!-- CHOCOLATE CHIP COOKIES -->
+            <label class="order-option">
+              <input
+                type="checkbox"
+                name="Items Requested"
+                value="Saturday - Brown Butter Salted Chocolate Chip Cookies"
+              >
+              <span>
+                Brown Butter Salted Chocolate Chip Cookies
+              </span>
+            </label>
+
+            <!-- PUMPKIN SPICE SNICKERDOODLES -->
+            <label class="order-option">
+              <input
+                type="checkbox"
+                name="Items Requested"
+                value="Saturday - Pumpkin Spice Snickerdoodle Cookies"
+              >
+              <span>
+                Pumpkin Spice Snickerdoodle Cookies
+              </span>
+            </label>
+
             <!-- SOURDOUGH BROWNIES -->
             <label class="order-option">
               <input
                 type="checkbox"
                 name="Items Requested"
-                value="Friday - Sourdough Brownies"
+                value="Saturday - Sourdough Brownies"
               >
               <span>Sourdough Brownies</span>
             </label>
 
           </div>
         </div>
+
       </div>
 
       <!-- QUANTITIES -->
@@ -899,7 +1013,7 @@ footer h2 {
         <textarea
           id="order-details"
           name="Quantities and Order Details"
-          placeholder="Example: 1 classic loaf, 3 pumpkin spice snickerdoodles, and 4 sourdough brownies."
+          placeholder="Example: 1 classic loaf, one 2-pack of muffins, and one 3-pack of chocolate chip cookies."
           required
         ></textarea>
 
@@ -1113,6 +1227,61 @@ function showAboutSection() {
 
 window.addEventListener("scroll", showAboutSection);
 window.addEventListener("load", showAboutSection);
+
+/* FRIDAY / SATURDAY PREORDER MENU */
+const pickupDay = document.getElementById("pickup-day");
+const fridayItems = document.getElementById("friday-items");
+const saturdayItems = document.getElementById("saturday-items");
+const itemInstructions = document.getElementById("item-instructions");
+
+function clearCheckboxes(section) {
+  const checkboxes = section.querySelectorAll(
+    'input[type="checkbox"]'
+  );
+
+  checkboxes.forEach(function(checkbox) {
+    checkbox.checked = false;
+  });
+}
+
+function updatePreorderMenu() {
+
+  if (pickupDay.value === "Friday, November 6") {
+
+    fridayItems.hidden = false;
+    saturdayItems.hidden = true;
+
+    clearCheckboxes(saturdayItems);
+
+    itemInstructions.textContent =
+      "Select the Friday items you would like to preorder. Add quantities and package sizes below.";
+
+  } else if (pickupDay.value === "Saturday, November 7") {
+
+    fridayItems.hidden = true;
+    saturdayItems.hidden = false;
+
+    clearCheckboxes(fridayItems);
+
+    itemInstructions.textContent =
+      "Select the Saturday items you would like to preorder. Add quantities and package sizes below.";
+
+  } else {
+
+    fridayItems.hidden = true;
+    saturdayItems.hidden = true;
+
+    clearCheckboxes(fridayItems);
+    clearCheckboxes(saturdayItems);
+
+    itemInstructions.textContent =
+      "Choose your pickup day above to see the available menu.";
+  }
+}
+
+pickupDay.addEventListener("change", updatePreorderMenu);
+
+updatePreorderMenu();
 </script>
 
 </body>
