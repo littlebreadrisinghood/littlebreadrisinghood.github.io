@@ -183,143 +183,18 @@ a { color: inherit; }
   line-height: 1.5;
 }
 
-.day-menu { margin-bottom: 35px; }
-.day-menu:last-child { margin-bottom: 0; }
-
-.day-heading {
-  margin-bottom: 20px;
-  padding: 15px 20px;
-  border-radius: 14px;
-  background: var(--tan);
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-}
-
-/* PRICES */
-.price-list {
-  max-width: 700px;
-  margin: auto;
-}
-
-.price-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 13px 0;
-  border-bottom: 1px solid #e5dbcc;
-}
-
-.price-row:last-child { border-bottom: none; }
-
-.price-row span:last-child {
-  flex-shrink: 0;
+/* MARKET ANNOUNCEMENT */
+.market-note {
+  margin-top: 14px;
   font-weight: 600;
   color: var(--terracotta);
 }
 
-/* ORDER FORM */
-.order-intro {
-  margin-bottom: 25px;
+.market-intro {
   text-align: center;
-  line-height: 1.7;
-}
-
-.order-notice {
-  margin-bottom: 25px;
-  padding: 18px;
-  border-left: 5px solid var(--terracotta);
-  border-radius: 10px;
-  background: #f4eadc;
-  line-height: 1.7;
-}
-
-.order-notice p { margin: 5px 0; }
-.form-section { margin-top: 28px; }
-.form-section h3 { margin-bottom: 12px; }
-.form-group { margin-bottom: 20px; }
-
-.form-group label.main-label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-input, select, textarea {
-  width: 100%;
-  margin-top: 7px;
-  padding: 13px;
-  border: 1px solid #cfc5b6;
-  border-radius: 10px;
-  background: #fff;
-  color: var(--dark-sage);
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1rem;
-}
-
-textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: var(--terracotta);
-  outline: 2px solid rgba(184,107,75,0.12);
-}
-
-.order-items {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.order-option {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 12px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--cream);
-  cursor: pointer;
-  line-height: 1.4;
-}
-
-.order-option:hover {
-  border-color: var(--terracotta);
-}
-
-.order-option input {
-  width: auto;
-  margin: 3px 0 0;
-  flex-shrink: 0;
-}
-
-.quantity-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 15px;
-}
-
-button {
-  width: 100%;
-  margin-top: 10px;
-  padding: 14px 20px;
-  border: none;
-  border-radius: 11px;
-  background: var(--terracotta);
-  color: #fffaf3;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.25s ease;
-}
-
-button:hover {
-  background: #9f583d;
-  transform: translateY(-2px);
+  line-height: 1.8;
+  margin: 0 auto 28px;
+  max-width: 720px;
 }
 
 /* ABOUT */
@@ -423,18 +298,11 @@ footer h2 { margin-bottom: 10px; }
   .hero-right h1 { font-size: 2.35rem; }
 
   .menu-grid,
-  .gallery,
-  .order-items,
-  .quantity-grid {
+  .gallery {
     grid-template-columns: 1fr;
   }
 
   .gallery img { height: 300px; }
-
-  .price-row {
-    flex-direction: column;
-    gap: 4px;
-  }
 }
 </style>
 </head>
@@ -461,385 +329,72 @@ footer h2 { margin-bottom: 10px; }
   </div>
 </header>
 
-<!-- BAKE STAND INFORMATION -->
+<!-- THIS WEEK'S MARKET ANNOUNCEMENT -->
 <div class="stand-info">
   <div class="stand-card">
-    <strong>Neighborhood Bake Stand</strong>
+    <strong>🍂 We're Heading to Our First-Ever Market! 🍂</strong>
 
     <p>
-      Open Friday, November 13 and Saturday, November 14
-      from 7 AM – 6 PM or until sold out
+      Our regular neighborhood bake stand will be
+      <b>closed this week</b>.
     </p>
 
     <p>
-      📍 13290 SE Laurie AVE, Milwaukie, Oregon 97222
+      Instead, come visit us at the
+      <b>Happy Valley Harvest Market!</b>
     </p>
 
     <p>
-      Fresh sourdough bread and small-batch bakes
-      with a rotating weekly menu!
+      <b>Saturday, November 21, 2026 · 9 AM – 2 PM</b>
     </p>
 
-    <p>
-      Preorders close Wednesday, November 11 at 8 PM.
-      Pickup is available Friday or Saturday
-      at the bake stand.
+    <p class="market-note">
+      We'd love to see you there and have your support
+      at our very first market event! 🧡
     </p>
   </div>
 </div>
 
-<!-- CURRENT MENU -->
-<section>
-  <h2>This Week's Bake Stand Menu — November 13 &amp; 14</h2>
+<!-- HARVEST MARKET MENU -->
+<section id="market-menu">
+  <h2>🍁 Harvest Market Menu 🍁</h2>
 
-  <!-- FRIDAY MENU -->
-  <div class="day-menu">
-    <div class="day-heading">Friday, November 13</div>
+  <p class="market-intro">
+    We're bringing a delicious selection of handmade
+    sourdough breads and small-batch treats!
+    Stop by, say hello, and help us celebrate our
+    first market. Everything will be available to
+    shop in person while supplies last.
+  </p>
 
-    <div class="menu-grid">
-      <div class="menu-category">
-        <h3>Sourdough Bread</h3>
-        <p>Classic</p>
-        <p>Smoked Gouda &amp; Onion</p>
-        <p>Everything Cheddar</p>
-      </div>
+  <div class="menu-grid">
 
-      <div class="menu-category">
-        <h3>Muffins</h3>
-        <p>Apple Cider Donut</p>
-      </div>
-
-      <div class="menu-category">
-        <h3>Cookies</h3>
-        <p>Brown Butter Salted Chocolate Chip</p>
-        <p>Maple Pecan</p>
-      </div>
-
-      <div class="menu-category">
-        <h3>Extras</h3>
-        <p>Cinnamon Rolls</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- SATURDAY MENU -->
-  <div class="day-menu">
-    <div class="day-heading">Saturday, November 14</div>
-
-    <div class="menu-grid">
-      <div class="menu-category">
-        <h3>Sourdough Bread</h3>
-        <p>Classic</p>
-        <p>Roasted Garlic &amp; Chives</p>
-        <p>Garlic Dill Havarti</p>
-      </div>
-
-      <div class="menu-category">
-        <h3>Muffins</h3>
-        <p>Lemon Blueberry Streusel</p>
-      </div>
-
-      <div class="menu-category">
-        <h3>Cookies</h3>
-        <p>Brown Butter Salted Chocolate Chip</p>
-        <p>Caramel Apple</p>
-      </div>
-
-      <div class="menu-category">
-        <h3>Extras</h3>
-        <p>Caramel Pecan Cinnamon Rolls</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICES -->
-<section>
-  <h2>Prices</h2>
-
-  <div class="card price-list">
-    <div class="price-row">
-      <span>Classic Sourdough Loaf</span>
-      <span>$10</span>
+    <div class="menu-category">
+      <h3>🥖 Bread</h3>
+      <p>Classic</p>
+      <p>Jalapeño Cheddar</p>
+      <p>Garlic Herb Asiago</p>
+      <p>Roasted Garlic &amp; Chive</p>
     </div>
 
-    <div class="price-row">
-      <span>Premium Inclusion Sourdough Loaf</span>
-      <span>$13</span>
+    <div class="menu-category">
+      <h3>🧁 Muffins</h3>
+      <p>Apple Cider Donut</p>
+      <p>Pumpkin Coffee Cake</p>
     </div>
 
-    <div class="price-row">
-      <span>Muffins</span>
-      <span>$7 per 2-pack · $13 per 4-pack</span>
+    <div class="menu-category">
+      <h3>🍪 Cookies</h3>
+      <p>Brown Butter Salted Chocolate Chip</p>
+      <p>Pumpkin Spice Snickerdoodles</p>
     </div>
 
-    <div class="price-row">
-      <span>Cookies</span>
-      <span>$3 each · $8 per 3-pack</span>
+    <div class="menu-category">
+      <h3>✨ Extras</h3>
+      <p>Sourdough Cinnamon Rolls</p>
+      <p>Sourdough Brownies</p>
     </div>
 
-    <div class="price-row">
-      <span>Friday Cinnamon Rolls</span>
-      <span>$5 each · $18 per 4-pack</span>
-    </div>
-
-    <div class="price-row">
-      <span>Saturday Caramel Pecan Cinnamon Rolls</span>
-      <span>$4 each</span>
-    </div>
-  </div>
-</section>
-
-<!-- PREORDER FORM -->
-<section id="order">
-  <h2>Place a Preorder</h2>
-
-  <div class="card">
-    <p class="order-intro">
-      Preorders close Wednesday, November 11 at 8 PM.
-      Pickup is available Friday, November 13
-      or Saturday, November 14 at the bake stand.
-      Please select your pickup day and use
-      the form below to request your items.
-    </p>
-
-    <div class="order-notice">
-      <p>
-        <strong>
-          Your order is not final until it has been confirmed.
-        </strong>
-      </p>
-
-      <p>
-        I will review your request and contact you
-        to confirm item availability before requesting payment.
-      </p>
-
-      <p>
-        Payment must be completed before your scheduled pickup day.
-      </p>
-    </div>
-
-    <form
-      id="preorder-form"
-      action="https://formspree.io/f/xbdwykyq"
-      method="POST"
-    >
-
-      <!-- CUSTOMER INFORMATION -->
-      <div class="quantity-grid">
-        <div class="form-group">
-          <label class="main-label" for="customer-name">Name</label>
-          <input
-            type="text"
-            id="customer-name"
-            name="Customer Name"
-            autocomplete="name"
-            required
-          >
-        </div>
-
-        <div class="form-group">
-          <label class="main-label" for="customer-phone">Phone Number</label>
-          <input
-            type="tel"
-            id="customer-phone"
-            name="Phone Number"
-            autocomplete="tel"
-            required
-          >
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="main-label" for="customer-email">Email Address</label>
-        <input
-          type="email"
-          id="customer-email"
-          name="Email Address"
-          autocomplete="email"
-          required
-        >
-      </div>
-
-      <!-- PICKUP DAY -->
-      <div class="form-group">
-        <label class="main-label" for="pickup-day">Pickup Day</label>
-
-        <select id="pickup-day" name="Pickup Day" required>
-          <option value="">Choose a pickup day</option>
-          <option value="Friday, November 13">
-            Friday, November 13
-          </option>
-          <option value="Saturday, November 14">
-            Saturday, November 14
-          </option>
-        </select>
-      </div>
-
-      <!-- PREORDER ITEMS -->
-      <div class="form-section">
-        <h3>Select Your Items</h3>
-
-        <p id="item-instructions">
-          Choose your pickup day above to see the available menu.
-        </p>
-
-        <!-- FRIDAY ITEMS -->
-        <div id="friday-items" class="day-order-group" hidden>
-          <h3>Friday, November 13 Menu</h3>
-
-          <div class="order-items">
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Friday - Classic Sourdough">
-              <span>Classic Sourdough</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Friday - Smoked Gouda and Onion Sourdough">
-              <span>Smoked Gouda &amp; Onion Sourdough</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Friday - Everything Cheddar Sourdough">
-              <span>Everything Cheddar Sourdough</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Friday - Apple Cider Donut Muffins">
-              <span>Apple Cider Donut Muffins</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Friday - Brown Butter Salted Chocolate Chip Cookies">
-              <span>Brown Butter Salted Chocolate Chip Cookies</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Friday - Maple Pecan Cookies">
-              <span>Maple Pecan Cookies</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Friday - Cinnamon Rolls">
-              <span>Cinnamon Rolls</span>
-            </label>
-          </div>
-        </div>
-
-        <!-- SATURDAY ITEMS -->
-        <div id="saturday-items" class="day-order-group" hidden>
-          <h3>Saturday, November 14 Menu</h3>
-
-          <div class="order-items">
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Saturday - Classic Sourdough">
-              <span>Classic Sourdough</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Saturday - Roasted Garlic and Chives Sourdough">
-              <span>Roasted Garlic &amp; Chives Sourdough</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Saturday - Garlic Dill Havarti Sourdough">
-              <span>Garlic Dill Havarti Sourdough</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Saturday - Lemon Blueberry Streusel Muffins">
-              <span>Lemon Blueberry Streusel Muffins</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Saturday - Brown Butter Salted Chocolate Chip Cookies">
-              <span>Brown Butter Salted Chocolate Chip Cookies</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Saturday - Caramel Apple Cookies">
-              <span>Caramel Apple Cookies</span>
-            </label>
-
-            <label class="order-option">
-              <input type="checkbox" name="Items Requested"
-                value="Saturday - Caramel Pecan Cinnamon Rolls">
-              <span>Caramel Pecan Cinnamon Rolls</span>
-            </label>
-          </div>
-        </div>
-      </div>
-
-      <!-- QUANTITIES -->
-      <div class="form-group" style="margin-top:25px;">
-        <label class="main-label" for="order-details">
-          Quantities and Order Details
-        </label>
-
-        <textarea
-          id="order-details"
-          name="Quantities and Order Details"
-          placeholder="Example: 1 classic loaf, one 2-pack of muffins, and one 3-pack of cookies."
-          required
-        ></textarea>
-      </div>
-
-      <!-- PICKUP TIME -->
-      <div class="form-group">
-        <label class="main-label" for="pickup-time">
-          Preferred Pickup Time
-        </label>
-
-        <select
-          id="pickup-time"
-          name="Preferred Pickup Time"
-          required
-        >
-          <option value="">Choose a pickup window</option>
-          <option value="8:00 AM–10:00 AM">8:00 AM–10:00 AM</option>
-          <option value="10:00 AM–12:00 PM">10:00 AM–12:00 PM</option>
-          <option value="12:00 PM–2:00 PM">12:00 PM–2:00 PM</option>
-          <option value="2:00 PM–4:00 PM">2:00 PM–4:00 PM</option>
-        </select>
-      </div>
-
-      <!-- ADDITIONAL NOTES -->
-      <div class="form-group">
-        <label class="main-label" for="additional-notes">
-          Additional Notes
-        </label>
-
-        <textarea
-          id="additional-notes"
-          name="Additional Notes"
-          placeholder="Please include any questions or special requests here."
-        ></textarea>
-      </div>
-
-      <input
-        type="hidden"
-        name="_subject"
-        value="New Little Bread Rising Hood Preorder Request - November 13 and 14"
-      >
-
-      <button type="submit">
-        Submit Preorder Request
-      </button>
-    </form>
   </div>
 </section>
 
@@ -945,84 +500,6 @@ function showAboutSection() {
 
 window.addEventListener("scroll", showAboutSection);
 window.addEventListener("load", showAboutSection);
-
-/* FRIDAY / SATURDAY PREORDER MENU */
-const pickupDay = document.getElementById("pickup-day");
-const fridayItems = document.getElementById("friday-items");
-const saturdayItems = document.getElementById("saturday-items");
-const itemInstructions = document.getElementById("item-instructions");
-
-function clearCheckboxes(section) {
-  section.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
-    checkbox.checked = false;
-  });
-}
-
-function updatePreorderMenu() {
-  if (pickupDay.value === "Friday, November 13") {
-    fridayItems.hidden = false;
-    saturdayItems.hidden = true;
-    clearCheckboxes(saturdayItems);
-
-    itemInstructions.textContent =
-      "Select the Friday items you would like to preorder. Add quantities and package sizes below.";
-
-  } else if (pickupDay.value === "Saturday, November 14") {
-    fridayItems.hidden = true;
-    saturdayItems.hidden = false;
-    clearCheckboxes(fridayItems);
-
-    itemInstructions.textContent =
-      "Select the Saturday items you would like to preorder. Add quantities and package sizes below.";
-
-  } else {
-    fridayItems.hidden = true;
-    saturdayItems.hidden = true;
-
-    clearCheckboxes(fridayItems);
-    clearCheckboxes(saturdayItems);
-
-    itemInstructions.textContent =
-      "Choose your pickup day above to see the available menu.";
-  }
-}
-
-pickupDay.addEventListener("change", updatePreorderMenu);
-updatePreorderMenu();
-
-/* REQUIRE AT LEAST ONE ITEM BEFORE SUBMISSION */
-const preorderForm = document.getElementById("preorder-form");
-
-preorderForm.addEventListener("submit", function(event) {
-  const selectedDay = pickupDay.value;
-
-  const activeSection =
-    selectedDay === "Friday, November 13"
-      ? fridayItems
-      : selectedDay === "Saturday, November 14"
-        ? saturdayItems
-        : null;
-
-  if (!activeSection) {
-    event.preventDefault();
-    alert("Please select your pickup day.");
-    pickupDay.focus();
-    return;
-  }
-
-  const selectedItems = activeSection.querySelectorAll(
-    'input[type="checkbox"]:checked'
-  );
-
-  if (selectedItems.length === 0) {
-    event.preventDefault();
-    alert("Please select at least one item for your preorder.");
-    activeSection.scrollIntoView({
-      behavior: "smooth",
-      block: "center"
-    });
-  }
-});
 </script>
 
 </body>
